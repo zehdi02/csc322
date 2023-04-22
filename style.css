@@ -15,15 +15,17 @@ body {
 header {
     background-color: #8a00fc;
     color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
 }
 
 .logo {
     flex-basis: 150px;
     margin-right: 10px;
+}
+
+.logo img {
+    max-width: 80px; /* Adjust the size of the logo as needed */
+    height: auto;
 }
 
 nav {
@@ -32,20 +34,19 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin-right: 10px;
+    display: inline;
 }
 
 nav ul li a {
     color: #fff;
+    margin-left: 10px;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -64,7 +65,7 @@ section {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
 }
 
 h2 {

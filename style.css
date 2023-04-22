@@ -24,7 +24,7 @@ header {
 }
 
 .logo img {
-    max-width: 80px; /* Adjust the size of the logo as needed */
+    max-width: 80px;
     height: auto;
 }
 
@@ -43,15 +43,15 @@ nav ul li {
     display: inline;
 }
 
-nav ul li a {
-    color: #fff;
-    margin-left: 10px;
+/* nav ul li a {
+    color: #ffffff;
+    margin-left: 20px;
     text-decoration: none;
-}
+} */
 
-nav ul li a:hover {
-    color: #FFD700;
-}
+/* nav ul li a:hover {
+    text-decoration: underline;
+} */
 
 /* Set section styles */
 section {
@@ -140,6 +140,88 @@ footer {
 
 .container ul li a {
     color: #fff;
-    margin-left: 10px;
+    margin-left: 20px;
     text-decoration: none;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* chat box */
+#chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#chat-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #8a00fc; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#chat-icon img {
+    width: 60px;
+    height: 60px;
+    /* Add any styling for the chat icon image, such as changing the color or adding effects */
+}
+
+#chat-window {
+    /* Style for the chat bot window, such as background color, width, height, etc. */
+    /* This is the window that will appear when the chat icon is clicked */
+    display: none; /* Hide the chat bot window by default */
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message p {
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: #d3e0ff;
+    /* Add any styling for the chat message, such as font size, color, etc. */
+}
+
+#chat-input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    /* Add any additional styles for the input box, such as font size, color, etc. */
+}
+
+#chat-send-button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8a00fc;
+    color: #fff;
+    cursor: pointer;
+    /* Add any additional styles for the send button, such as font size, color, etc. */
 }

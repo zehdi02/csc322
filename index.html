@@ -4,7 +4,7 @@
     <title>O-CompS Home Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
@@ -26,7 +26,6 @@
             </nav>
         </div>
     </header>
-    
     <section id="home">
         <h1>Welcome to O-CompS</h1>
         <p>Your destination for the latest electronics, appliances, and more.</p>
@@ -101,6 +100,24 @@
             <a href="#" class="cta">Shop Now</a>
         </div>
     </section>
+
+    <div id="chat-bot">
+        <div id="chat-icon">
+          <img src="img/chat_employee.png" alt="Chat Icon">
+        </div>
+        <div id="chat-window">
+            <div class="message received">
+                <p>Hello! How may I help you?</p>
+            </div>
+            <div id="chat-messages"></div>
+            <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask a question...">
+                <button id="chat-send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="chat_script.js"></script>
+
     <footer>
         <div class="container">
             <div class="left-content">

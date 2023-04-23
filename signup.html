@@ -17,6 +17,9 @@
             justify-content: center;
             height: 100vh;
         }
+        .signup-container h1 {
+            padding-bottom: 10px;
+        }
         .signup-form {
             width: 300px;
             padding-bottom: 10px;
@@ -24,18 +27,20 @@
         .signup-form input {
             margin-bottom: 10px;
             padding: 8px;
-            width: 100%;
+            width: calc(100% - 20px);
+            border-radius: 5px;
         }
         .signup-form button {
             padding: 8px;
             width: 100%;
-            background-color: #007bff;
+            background-color: #8a00fc;
             color: #fff;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
         }
         .signup-form button:hover {
-            background-color: #0056b3;
+            background-color: #6200b3;
         }
         .signup-form p {
             margin-top: 10px;
@@ -48,11 +53,17 @@
         .signup-form a:hover {
             text-decoration: underline;
         }
+        #signup-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="header-container">
             <div class="logo">
                 <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
             </div>
@@ -85,7 +96,7 @@
     </div>
     
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <div class="left-content">
                 <p>&copy; 2023 O-CompS. All rights reserved.</p>
             </div>

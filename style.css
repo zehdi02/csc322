@@ -30,6 +30,7 @@ header {
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #8a00fc; 
+    padding-top: 94px;
 }
 #home h1, #home p {
     margin-bottom: 10px;
@@ -43,6 +44,11 @@ header {
 .logo img {
     max-width: 120px;
     height: auto;
+}
+
+.nav_bar{
+    position: fixed;
+    width: 100%;
 }
 
 nav {

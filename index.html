@@ -5,133 +5,217 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .personal-deals {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .personal-deals img {
+            max-height: 200px;
+        }
+        .personal-prod {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            max-width: 260px;
+        }
+
+        #deals {
+            padding-bottom: 50px;
+        }
+
+        .bestselling_deals {
+            justify-content: space-evenly;
+            display: flex;
+        }
+        .bestselling_deals img {
+            max-height: 200px;
+        }
+        .best_deal {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            max-width: 260px;
+        }
+
+
+    </style>
+
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Purchase History</a></li>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="signup.html">Create an Account</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="home">
-        <h1>Welcome to O-CompS</h1>
-        <p>Your destination for the latest electronics, appliances, and more.</p>
-        <a href="#products" class="cta">Shop Now</a>
-    </section>
-    <section id="personal_products">
-        <h2>Based on your recent history</h2>
-            <div class="deal">
-                <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
-                <h3>Deal 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-                <a href="#" class="cta">Shop Now</a>
-            </div>
-            <div class="deal">
-                <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1">
-                <h3>Deal 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-                <a href="#" class="cta">Shop Now</a>
-            </div>
-            <div class="deal">
-                <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 1">
-                <h3>Deal 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-                <a href="#" class="cta">Shop Now</a>
-            </div>
-    </section>
-    <section id="products">
-        <h2>Our Newest Releases</h2>
-        <div class="product">
-            <img src="img/landing_page/new_product_1.avif" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Learn More</a>
-        </div>
-        <div class="product">
-            <img src="img/landing_page/new_product_2.avif" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Learn More</a>
-        </div>
-        <div class="product">
-            <img src="img/landing_page/new_product_3.avif" alt="Product 3">
-            <h3>Product 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Learn More</a>
-        </div>
-        <div class="product">
-            <img src="img/landing_page/new_product_1.avif" alt="Product 3">
-            <h3>Product 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Learn More</a>
-        </div>
-    </section>
-    <section id="deals">
-        <h2>Shop our Bestsellers</h2>
-        <div class="deal">
-            <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
-            <h3>Deal 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Shop Now</a>
-        </div>
-        <div class="deal">
-            <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 2">
-            <h3>Deal 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Shop Now</a>
-        </div>
-        <div class="deal">
-            <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 3">
-            <h3>Deal 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit vitae est bibendum laoreet.</p>
-            <a href="#" class="cta">Shop Now</a>
-        </div>
-    </section>
+    
 
-    <div id="chat-bot">
-        <div id="chat-icon">
-          <img src="img/chat_employee.png" alt="Chat Icon">
-        </div>
-        <div id="chat-window">
-            <div class="message received">
-                <p>Hello! How may I help you?</p>
+    <div class="page_container">
+        <div class="content_wrap">
+            <header class="nav_bar">
+                <div class="header-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Purchase History</a></li>
+                            <li><a href="signin.html">Sign In</a></li>
+                            <li><a href="signup.html">Create an Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section id="home">
+                <h1>Welcome to O-CompS</h1>
+                <p>Your destination for the latest electronics, appliances, and more.</p>
+                <a href="products.html" class="cta">Shop Now</a>
+            </section>
+
+            <section id="personal_products">
+                <h2>Based on your recent history</h2>
+                <div class="personal-deals">
+                    <div class="personal-prod">
+                        <a href="#">
+                            <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
+                            <p>Lenovo - Legion Pro 5i 16" - 82WK0069US - Onyx Grey</p>
+                        </a>
+                    </div>
+                    <div class="personal-prod">
+                        <a href="#">
+                            <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1">
+                            <p>Arcade1up The Fast & The Furious Deluxe Arcade Game</p>
+                        </a>
+                    </div>
+                    <div class="personal-prod">
+                        <a href="#">
+                            <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 1">
+                            <p>Conair - Magnetic Head Trimmer - Silver</p>
+                        </a>
+                    </div>
+                    <div class="personal-prod">
+                        <a href="#">
+                            <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
+                            <p>Apple - iPhone 13 5G 128GB (Unlocked) - Midnight</p>
+                        </a>
+                    </div>
+                    <div class="personal-prod">
+                        <a href="#">
+                            <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1">
+                            <p>Frigidaire - Gallery 1.9 Cu. Ft. Over-the Range Microwave with Air Fry - Smudge Proof Stainless Steel</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products">
+                <h2>Our Newest Releases</h2>
+                
+                <div class="new_prod_container">
+                    <div class="new_prod">
+                        <img src="img/landing_page/new_product_1.avif" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="cta">Learn More</a>
+                    </div>
+                    <div class="new_prod">
+                        <img src="img/landing_page/new_product_2.avif" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="cta">Learn More</a>
+                    </div>
+                    <div class="new_prod">
+                        <img src="img/landing_page/new_product_3.avif" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="cta">Learn More</a>
+                    </div>
+                    <div class="new_prod">
+                        <img src="img/landing_page/new_product_1.avif" alt="Product 3">
+                        <h3>Product 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="cta">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="deals">
+                <h2>Shop our Bestsellers</h2>
+                <div class="bestselling_deals">
+                    <div class="best_deal">
+                        <a href="#" class="cta">
+                            <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
+                            <p>SUPER DUPER POWERFUL PC 3000</p>
+                        </a>
+                    </div>
+                    <div class="best_deal">
+                        <a href="#" class="cta">
+                            <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 2">
+                            <p>SUPER DUPER PP POO POO MAN 2000</p>
+                        </a>
+                    </div>
+                    <div class="best_deal">
+                        <a href="#" class="cta">
+                            <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 3">
+                            <p>SUPER DUPER NON BINARY RAINBOW FLAG CPU 69000</p>
+                        </a>
+                    </div>
+                    <div class="best_deal">
+                        <a href="#" class="cta">
+                            <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1">
+                            <p>WHITE</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div id="chat-bot">
+                <div id="chat-icon">
+                <img src="img/chat_employee.png" alt="Chat Icon">
+                </div>
+                <div id="chat-window">
+                    <div class="message received">
+                        <p>Hello! How may I help you?</p>
+                    </div>
+                    <div id="chat-messages"></div>
+                    <div id="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Ask a question...">
+                        <button id="chat-send-button">Send</button>
+                    </div>
+                </div>
             </div>
-            <div id="chat-messages"></div>
-            <div id="chat-input-container">
-                <input type="text" id="chat-input" placeholder="Ask a question...">
-                <button id="chat-send-button">Send</button>
-            </div>
-        </div>
+            <script src="chat_script.js"></script>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="left-content">
+                        <p>&copy; 2023 O-CompS. All rights reserved.</p>
+                    </div>
+                    <div class="right-content">
+                        <ul>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div> 
     </div>
-    <script src="chat_script.js"></script>
 
-    <footer>
-        <div class="footer-container">
-            <div class="left-content">
-                <p>&copy; 2023 O-CompS. All rights reserved.</p>
-            </div>
-            <div class="right-content">
-                <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    
 </body>
 </html>

@@ -62,54 +62,58 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Purchase History</a></li>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="signup.html">Create an Account</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="page_container">
+        <div class="content_wrap">
+            <header>
+                <div class="header-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Purchase History</a></li>
+                            <li><a href="signin.html">Sign In</a></li>
+                            <li><a href="signup.html">Create an Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 
-    <div class="signup-container">
-        <h1>Create an Account</h1>
-        <form class="signup-form" action="/signup" method="post">
-            <input type="text" name="firstname" placeholder="First Name" required>
-            <input type="text" name="lastname" placeholder="Last Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <input type="tel" name="phone" placeholder="Mobile Phone Number" required>
-            <button type="submit">Sign Up</button>
-        </form>
-        <p>Already have an account? <a href="/login">Sign in</a></p>
+            <div class="signup-container">
+                <h1>Create an Account</h1>
+                <form class="signup-form" action="/signup" method="post">
+                    <input type="text" name="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                    <input type="tel" name="phone" placeholder="Mobile Phone Number" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="/login">Sign in</a></p>
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="left-content">
+                        <p>&copy; 2023 O-CompS. All rights reserved.</p>
+                    </div>
+                    <div class="right-content">
+                        <ul>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="left-content">
-                <p>&copy; 2023 O-CompS. All rights reserved.</p>
-            </div>
-            <div class="right-content">
-                <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

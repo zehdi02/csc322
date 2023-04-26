@@ -163,6 +163,9 @@ footer {
     /* display: flex;
     flex-direction: column;
     align-items: flex-start; Updated */
+    position: absolute;  
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-container {
@@ -174,6 +177,14 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     flex: 1; /* Added */
+}
+
+.page_container {
+    position: relative;
+}
+
+.content_wrap {
+    padding-bottom: 2.5rem;
 }
 
 .footer-container p {
@@ -280,38 +291,57 @@ footer {
 
 .prod-item {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid #8a00fc;
+}
+
+.prod_browse{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* max-width: 800px; */
     /* border-bottom: 1px solid #8a00fc; */
+    margin: 100px 0px;
+    max-width: 1406px;
+}
+
+.prod_browse img {
+    max-width: 232px;
 }
 
 .left-col {
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* width: 33%; */
 }
 
 .middle-col {
     flex: 1;
     align-items: center; 
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 697px;
+    /* width: 40%; */
 }
 .name_buy {
-    
-    align-items: center; 
-    justify-content: flex-end; 
-    padding-left: 40px;
-    padding-right: 40px;
-
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
     }
 
 .name_buy p {
     font-size: 25px;
     font-weight: bold;
+}
+
+.prod_name {
+    font-weight: bold;
+    padding-bottom: 1rem;
 }

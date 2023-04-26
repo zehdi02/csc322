@@ -140,6 +140,7 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 .cta {
     display: inline-block;
     background-color: #8a00fc;
@@ -147,6 +148,7 @@ h2 {
     padding: 10px 20px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+    border-radius: .375rem;
 }
 
 .cta:hover {

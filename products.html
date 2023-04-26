@@ -17,14 +17,13 @@
         }
 
         .cat{
-            /* display: flex; */
-            /* grid-column: repeat(2, 33% );
-            grid-row: repeat(2, 33%); */
+            display: grid;
+            grid-column: repeat(2, 33% );
+            grid-row: repeat(2, 33%);
             place-items: center;
-            /* grid-row-gap: 25px;
-            grid-column-gap: 50px; */
-            padding-top: 60px;
-            padding-bottom: 60px;
+            grid-row-gap: 25px;
+            grid-column-gap: 50px;
+            padding-bottom: 50px;
         }
 
         .p1, .p2, .p3, .p4{
@@ -50,28 +49,50 @@
             grid-row: 2;
         }
         h3{
-            /* text-align: center; */
-            padding-bottom: 10px;
+            text-align: center;
         }
 
         a.cta{
           display: flex;
           justify-content: center;
           align-items: center;
-          /* height: 100%; */
+          height: 100%;
           max-width: 50px;
           margin: 0 auto;
         }
 
+        @media (max-width: 680px) {
+          .cat {
+              grid-column: 1;
+              grid-row: repeat(4, 1fr);
+            }
+          p1{
+              grid-column: 1;
+              grid-row: 1;
+            }
+          .p2{
+              grid-column: 1;
+              grid-row: 2;
+            }
+          .p3{
+            grid-column: 1;
+            grid-row: 3;
+          }
+          .p4{
+            grid-column: 1;
+            grid-row: 4;
+          }
+        }
+
     /* checkboxes and labels*/
         label {
-            display: block;
-            margin-bottom: 10px; 
+            display: block; /* Set the label to a block element */
+            margin-bottom: 10px; /* Add some margin to separate the labels */
         }
 
         input[type="checkbox"] {
-            display: inline-block;
-            vertical-align: middle;
+            display: inline-block; /* Set the checkbox to an inline block element */
+            vertical-align: middle; /* Align the checkbox to the middle of the line */
             margin-right: 5px;
         }
 
@@ -85,16 +106,11 @@
             min-width: 10%;
             background-color: #f0f0f0;
             overflow: auto;
-            margin-left: 220px;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
 
-        .brand, .price, .rating, .prod-cat{
+        .brand, .price, .rating{
             border: 1.5px solid #ccc;
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -103,9 +119,7 @@
     <header class="nav_bar">
         <div class="header-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
-                </a>
+                <img src="img/o-comps_logo2.png" alt="O-CompS Logo">
             </div>
             <nav>
                 <ul>
@@ -121,131 +135,129 @@
         </div>
     </header>
 
-    <div class="product_page_contents">
-        <div class="filter">
-            <div class="prod-cat">
-                <h3>CATEGORY</h3>
-                <label>
-                    <input type="checkbox" name="cat" value="option1">
-                    Category A
-                </label>
-                <label>
-                    <input type="checkbox" name="cat" value="option2">
-                    Category B
-                </label>
-                <label>
-                    <input type="checkbox" name="cat" value="option3">
-                    Category C
-                </label>
-                <label>
-                    <input type="checkbox" name="cat" value="option4">
-                    Category D
-                </label>
-            </div>
-            <div class="brand">
-                <h3 > BRAND </h3>
-                <label>
-                    <input type="checkbox" name="brand" value="option1">
-                    Brand A
-                </label>
-                <label>
-                    <input type="checkbox" name="beand" value="option2">
-                    Brand B
-                </label>
-                <label>
-                    <input type="checkbox" name="brandp" value="option3">
-                    Brand C
-                </label>
-            </div>
-            <div class="price">
-                <h3> PRICE </h3>
-                <label>
-                    <input type="checkbox" name="price" value="option1">
-                    Low to High
-                </label>
-                <label>
-                    <input type="checkbox" name="proce" value="option2">
-                    High to Low
-                </label>
-            </div>
-            <div class="rating">
-                <h3> RATING </h3>
-                <label>
-                    <input type="checkbox" name="rating" value="5star">
-                    <span> &#9733;&#9733;&#9733;&#9733;&#9733; </span> & Up
-                </label>
-                <label>
-                    <input type="checkbox" name="rating" value="4star">
-                    <span> &#9733;&#9733;&#9733;&#9733;&#9734; </span> & Up
-                </label>
-                <label>
-                    <input type="checkbox" name="rating" value="3star">
-                    <span> &#9733;&#9733;&#9733;&#9734;&#9734; </span> & Up
-                </label>
-            </div>
+    <div class="filter">
+        <div class="brand">
+            <h3 > BRAND </h3>
+            <label>
+                  <input type="checkbox" name="brand" value="option1">
+                  Option 1
+            </label>
+            <label>
+                <input type="checkbox" name="beand" value="option2">
+                Option 2
+            </label>
+            <label>
+                <input type="checkbox" name="brandp" value="option3">
+                Option 3
+            </label>
         </div>
-
-        <div class="p_container" >
-            <div class="cat">
-                <div class="prod-item" id="prod1">
-                    <div class="left-col">
-                        <img src="img/products_page/laptop1.jpeg" alt="Product 1">
-                    </div>
-                    <div class="middle-col">
-                        <p>Product 1</p>
-                        <p>Rating: </p>
-                    </div>
-                    <div class="name_buy">
-                        <p>$499.99</p>
-                        <a href="#" class="cta">Buy</a>
-                    </div>
-                </div>
-
-                <div class="prod-item" id="prod2">
-                    <div class="left-col">
-                        <img src="img/products_page/laptop2.jpeg" alt="Product 1">
-                    </div>
-                    <div class="middle-col">
-                        <p>Product 1</p>
-                        <p>Rating: </p>
-                    </div>
-                    <div class="name_buy">
-                        <p>$399.99</p>
-                        <a href="#" class="cta">Buy</a>
-                    </div>
-                </div>
-
-                <div class="prod-item" id="prod3">
-                    <div class="left-col">
-                        <img src="img/products_page/laptop3.jpeg" alt="Product 1">
-                    </div>
-                    <div class="middle-col">
-                        <p>Product 1</p>
-                        <p>Rating: </p>
-                    </div>
-                    <div class="name_buy">
-                        <p>$299.99</p>
-                        <a href="#" class="cta">Buy</a>
-                    </div>
-                </div>
-
-                <div class="prod-item" id="prod4">
-                    <div class="left-col">
-                        <img src="img/products_page/laptop4.jpeg" alt="Product 1">
-                    </div>
-                    <div class="middle-col">
-                        <p>Product 1</p>
-                        <p>Rating: </p>
-                    </div>
-                    <div class="name_buy">
-                        <p>$199.99</p>
-                        <a href="#" class="cta">Buy</a>
-                    </div>
-                </div>
-            </div>
+        <div class="price">
+            <h3> PRICE </h3>
+            <label>
+                  <input type="checkbox" name="price" value="option1">
+                  low to high
+            </label>
+            <label>
+                <input type="checkbox" name="proce" value="option2">
+                high to low
+            </label>
+        </div>
+        <div class="rating">
+            <h3> RATING </h3>
+            <label>
+                <input type="checkbox" name="rating" value="5star">
+                <span> &#9733;&#9733;&#9733;&#9733;&#9733; </span> & up
+            </label>
+            <label>
+                <input type="checkbox" name="rating" value="4star">
+                <span> &#9733;&#9733;&#9733;&#9733;&#9734; </span> & up
+            </label>
+            <label>
+                <input type="checkbox" name="rating" value="3star">
+                <span> &#9733;&#9733;&#9733;&#9734;&#9734; </span> & up
+            </label>
         </div>
     </div>
 
 
+<div class="p_container" >
+    <h3>Catagory 1</h3>
+        <section class="cat">
+            <div class="p1">
+                <img src="img/landing_page/bestseller_product_2.avif" alt="Product 1">
+                <div class="name_buy">
+                    <h3>Product 1</h3>
+                    <a href="#" class="cta">Buy</a>
+                </div>
+            </div>
+            <div class="p2">
+                <img src="img/landing_page/bestseller_product_2.avif" alt="Product 2">
+                <div class="name_buy">
+                    <h3>Product 2</h3>
+                    <a href="#" class="cta">Buy</a>
+                </div>
+            </div>
+            <div class="p3">
+                <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                <h3>Product 3</h3>
+                <a href="#" class="cta">Buy</a>
+            </div>
+            <div class="p4">
+                <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                <h3>Product 4</h3>
+                <a href="#" class="cta">Buy</a>
+            </div>
+        </section>
+
+      <h3>Catagory 1</h3>
+          <section class="cat">
+                <div class="p1">
+                    <img src="img/landing_page/bestseller_product_2.avif" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <a href="#" class="cta">Buy</a>
+                </div>
+                <div class="p2">
+                    <img src="img/landing_page/bestseller_product_2.avif" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <a href="#" class="cta">Buy</a>
+                </div>
+                <div class="p3">
+                    <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                    <h3>Product 3</h3>
+
+                    <a href="#" class="cta">Buy</a>
+                </div>
+                <div class="p4">
+                    <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                    <h3>Product 4</h3>
+
+                    <a href="#" class="cta">Buy</a>
+                </div>
+            </section>
+
+      <h3>Catagory 1</h3>
+          <section class="cat">
+              <div class="p1">
+                  <img src="img/landing_page/bestseller_product_2.avif" alt="Product 1">
+                  <h3>Product 1</h3>
+                  <a href="#" class="cta">Buy</a>
+              </div>
+              <div class="p2">
+                  <img src="img/landing_page/bestseller_product_2.avif" alt="Product 2">
+                  <h3>Product 2</h3>
+                  <a href="#" class="cta">Buy</a>
+              </div>
+              <div class="p3">
+                  <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                  <h3>Product 3</h3>
+                  <a href="#" class="cta">Buy</a>
+              </div>
+              <div class="p4">
+                  <img src="img/landing_page/bestseller_product_2.avif" alt="Product 3">
+                  <h3>Product 4</h3>
+                  <a href="#" class="cta">Buy</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

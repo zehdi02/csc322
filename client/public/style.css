@@ -1,5 +1,16 @@
+.border {
+    height: 65px;
+    background-color: #8a00fc;
+
+}
+.border-thin {
+    height: 1px;
+    background-color: #a639ff;
+    margin: 20px 40px;
+}
+
 /* Reset some default styles */
-body, figure, h1, h2, h3, p, ul, li {
+body, figure, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
 }

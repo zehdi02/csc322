@@ -22,13 +22,13 @@ footer {
     flex: 1; /* Added */
 }
 
-.page_container {
+/* .page_container {
     position: relative;
 }
 
 .content_wrap {
     padding-bottom: 2.5rem;
-}
+} */
 
 .footer-container p {
     margin: 0;

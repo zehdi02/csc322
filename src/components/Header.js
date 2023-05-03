@@ -18,8 +18,8 @@ export default function header() {
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Purchase History</a></li>
-                            <li><a href="signin.html">Sign In</a></li>
-                            <li><a href="signup.html">Create an Account</a></li>
+                            <li><Link to="/sign-in">Sign In</Link></li>
+                            <li><Link to="/sign-up">Create an Account</Link></li>
                         </ul>
                     </nav>
                 </div>

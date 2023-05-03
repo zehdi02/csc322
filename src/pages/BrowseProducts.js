@@ -3,16 +3,13 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ChatBox from '../components/ChatBox'
 
+import MainLayout from '../layout/MainLayout'
+
 function BrowseProducts() {
   return (
     
-    <div>
-        <div className="page_container">
-            <div className="content_wrap">
-
-                <Header />
-
-                <div className="product_page_contents">
+    <MainLayout>
+        <div className="product_page_contents">
                     <div className="p_container" >
                         <div className="filter">
                             <div className="filter_contents">
@@ -188,15 +185,8 @@ function BrowseProducts() {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <ChatBox />
-
-                <Footer />
-
-            </div>
         </div>
-    </div>
+    </MainLayout>
     
 
   )

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import BrowseProducts from './pages/BrowseProducts';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 import {
   createBrowserRouter,
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
     {
       path: "browse-products",
       element: <BrowseProducts />,
+    },
+    {
+      path: "sign-in",
+      element: <SignIn />,
+    },
+    {
+      path: "sign-up",
+      element: <SignUp />,
     },
   ]);
 

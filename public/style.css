@@ -112,18 +112,6 @@ h2 {
     gap: 10px;
 }
 
-.new_prod_container .new_prod {
-}
-
-.new_prod {
-    /* padding-left: 100px;
-    padding-right: 100px; */
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
-    /* display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 10px;  */
-}
 
 .new_prod {
     flex-basis: calc(30% - 30px);
@@ -345,10 +333,6 @@ footer {
 }
 
 /* Product page */
-
-.product_page_contents {
-
-}
 
 .prod-item {
     display: flex;

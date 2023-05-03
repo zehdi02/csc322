@@ -4,7 +4,6 @@ import './App.css'
 
 import MainLayout from './layout/MainLayout';
 
-
 function App() {
   return (
   <MainLayout>
@@ -90,7 +89,7 @@ function App() {
                 <a href="#" className="cta">Learn More</a>
             </div>
             <div className="new_prod">
-                <a class="cta" href="#">
+                <a className="cta" href="#">
                     <img src="img/landing_page/new_product_3.avif" alt="Product 3"/>
                 </a>
                 <a href="#">
@@ -100,7 +99,7 @@ function App() {
                 <a href="#" className="cta">Learn More</a>
             </div>
             <div className="new_prod">
-                <a class="cta" href="#">
+                <a className="cta" href="#">
                     <img src="img/landing_page/new_product_3.avif" alt="Product 4"/>
                 </a>
                 <a href="#">

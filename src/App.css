@@ -13,24 +13,14 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 #home .cta {
     padding: 8px;
 }
 
-.border {
-    min-height: 65px;
-    background-color: #8a00fc;
 
-}
-.border-thin {
-    height: 1px;
-    background-color: #a639ff;
-    margin: 20px 40px;
-    
-}
 
 /* User's recommended products */
 #products {

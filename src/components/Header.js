@@ -18,7 +18,7 @@ export default function header() {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/browse-products">Products</Link></li>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            {/* <li><a href="#">Contact Us</a></li>  */}
                             <li><a href="#">Purchase History</a></li>
                             <li><Link to="/sign-in">Sign In</Link></li>
                             <li><Link to="/sign-up">Create an Account</Link></li>

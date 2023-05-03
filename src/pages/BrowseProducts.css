@@ -1,0 +1,105 @@
+
+
+
+
+/* checkboxes and labels*/
+label {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* for the sidebar*/
+.filter {
+    height: 100%;
+    /* max-height: 400px; */
+    width: 17%;
+    min-width: 10%;
+    position: sticky;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+
+}
+
+.filter_contents {
+    background-color: #f0f0f0;
+
+}
+
+.brand, .price, .rating, .prod-cat{
+    border: 1.5px solid #ccc;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+/* Product list */
+.product_page_contents {
+
+}
+
+.prod-item {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #8a00fc;
+}
+
+.prod_browse{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* max-width: 800px; */
+    /* border-bottom: 1px solid #8a00fc; */
+    margin: 100px 0px;
+    max-width: 1406px;
+}
+
+.prod_browse img {
+    max-width: 232px;
+}
+
+.left-col {
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* width: 33%; */
+}
+
+.middle-col {
+    flex: 1;
+    align-items: center; 
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 697px;
+    /* width: 40%; */
+}
+.name_buy {
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    }
+
+.name_buy p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.prod_name {
+    font-weight: bold;
+    padding-bottom: 1rem;
+}

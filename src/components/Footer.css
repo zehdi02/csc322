@@ -1,0 +1,55 @@
+/* Set footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; Updated */
+    position: absolute;  
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 1; /* Added */
+}
+
+.page_container {
+    position: relative;
+}
+
+.content_wrap {
+    padding-bottom: 2.5rem;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.footer-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container ul li {
+    display: inline;
+}
+
+.footer-container ul li a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.footer-container ul li a:hover {
+    text-decoration: underline;
+}

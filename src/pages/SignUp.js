@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './SignUp.css'
+
 import MainLayout from '../layout/MainLayout'
 
 function SignUp() {

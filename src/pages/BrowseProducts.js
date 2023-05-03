@@ -1,4 +1,7 @@
 import React from 'react'
+
+import './BrowseProducts.css'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ChatBox from '../components/ChatBox'

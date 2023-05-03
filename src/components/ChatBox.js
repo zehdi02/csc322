@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './ChatBox.css'
+
 function ChatBox() {
   const [chatWindowDisplay, setChatWindowDisplay] = useState(false);
   const [messages, setMessages] = useState([

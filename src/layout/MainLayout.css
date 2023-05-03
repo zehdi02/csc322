@@ -1,0 +1,9 @@
+/* footer stick to bottom*/
+.page_container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content_wrap {
+    padding-bottom: 2.5rem;
+}

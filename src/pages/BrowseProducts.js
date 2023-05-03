@@ -79,6 +79,7 @@ function BrowseProducts() {
                                 </div>
                             </div>
                         </div>
+
                         <div className="prod_browse">
                             <div className="prod-item" id="prod1">
                                 <div className="left-col">
@@ -93,8 +94,7 @@ function BrowseProducts() {
                                     <a href="#" className="cta">Buy</a>
                                 </div>
                             </div>
-
-                            <div className="prod-item" id="prod5">
+                            {/* <div className="prod-item" id="prod5">
                                 <div className="left-col">
                                     <img src="img/products_page/laptop5.jpeg" alt="Product 1" />
                                 </div>
@@ -146,7 +146,6 @@ function BrowseProducts() {
                                     <a href="#" className="cta">Buy</a>
                                 </div>
                             </div>
-                            
                             <div className="prod-item" id="prod2">
                                 <div className="left-col">
                                     <img src="img/products_page/laptop2.jpeg" alt="Product 1" />
@@ -185,7 +184,7 @@ function BrowseProducts() {
                                     <p>$199.99</p>
                                     <a href="#" className="cta">Buy</a>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
         </div>

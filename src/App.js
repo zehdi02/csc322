@@ -1,33 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './Header';
+import Footer from './Footer';
+import ChatBox from './ChatBox';
+
+/*
+============chat box javascript code============
+*/
+
 
 function App() {
   return (
   <div>
-    
-
     <div className="page_container">
         <div className="content_wrap">
-            <header className="nav_bar">
-                <div className="header-container">
-                    <div className="logo">
-                        <a href="index.html">
-                            <img src="img/o-comps_logo2.png" alt="O-CompS Logo"/>
-                        </a>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Purchase History</a></li>
-                            <li><a href="signin.html">Sign In</a></li>
-                            <li><a href="signup.html">Create an Account</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            
+            <Header />
+            
 
             <section id="home">
                 <h1>Welcome to O-CompS</h1>
@@ -62,12 +50,12 @@ function App() {
                             <p>Apple - iPhone 13 5G 128GB (Unlocked) - Midnight</p>
                         </a>
                     </div>
-                    <div className="personal-prod">
+                    {/* <div className="personal-prod">
                         <a href="#" className="cta">
                             <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1"/>
                             <p>Frigidaire - Gallery 1.9 Cu. Ft. Over-the Range Microwave</p>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -132,41 +120,12 @@ function App() {
                 </div>
             </section>
 
-            <div id="chat-bot">
-                <div id="chat-icon">
-                <img src="img/chat_employee.png" alt="Chat Icon"/>
-                </div>
-                <div id="chat-window">
-                    <div className="message received">
-                        <p>Hello! How may I help you?</p>
-                    </div>
-                    <div id="chat-messages"></div>
-                    <div id="chat-input-container">
-                        <input type="text" id="chat-input" placeholder="Ask a question..."/>
-                        <button id="chat-send-button">Send</button>
-                    </div>
-                </div>
-            </div>
-            {/* <script src="chat_script.js"></script> */}
+            <ChatBox />
 
-            <footer>
-                <div className="footer-container">
-                    <div className="left-content">
-                        <p>&copy; 2023 O-CompS. All rights reserved.</p>
-                    </div>
-                    <div className="right-content">
-                        <ul>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
+            
         </div> 
     </div>
-
-    
   </div>
   );
 }

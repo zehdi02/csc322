@@ -3,11 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import ChatBox from './ChatBox';
 
-/*
-============chat box javascript code============
-*/
-
-
 function App() {
   return (
   <div>

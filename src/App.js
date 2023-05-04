@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import './App.css'
 
@@ -12,7 +13,7 @@ function App() {
     <section id="home">
         <h1>Welcome to O-CompS</h1>
         <p>Your destination for the latest electronics, appliances, and more.</p>
-        <a href="products.html" className="cta">Shop Now</a>
+        <Link to="./browse-products"><a className="cta">Shop Now</a></Link>
     </section>
 
     <div class="border"></div>

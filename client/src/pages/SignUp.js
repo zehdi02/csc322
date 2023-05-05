@@ -30,7 +30,7 @@ function SignUp() {
     <MainLayout>
         <div class="signup-container">
                 <h1>Create an Account</h1>
-                <form class="signup-form" action="/signup" method="post">
+                <form class="signup-form">
                     <input type="text" name="firstname" placeholder="First Name" required onChange={(e) => {setfnameReg(e.target.value);}}/>
                     <input type="text" name="lastname" placeholder="Last Name" required onChange={(e) => {setlnameReg(e.target.value);}}/>
                     <input type="email" name="email" placeholder="Email" required onChange={(e) => {setemailReg(e.target.value);}}/>

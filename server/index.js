@@ -24,9 +24,8 @@ db.connect((err) => {
     console.log('Connected to MySQL database!');
   });
 
+  //Gets Infromation from signup page and puts it in DB
 app.post("/sign-up", (req, res) => {
-
-
     const firstname = req.body.firstname
     const lastname = req.body.lastname
     const email = req.body.email
@@ -39,6 +38,28 @@ app.post("/sign-up", (req, res) => {
     (err,result) => {console.log(err);
     });
 });
+
+//Gets infromation from DB
+app.post("/sign-in",(req,res)=>{
+    //const firstname = req.body.firstname
+    const email = req.body.email
+    const password = req.body.password
+
+    db.query("SELECT * FROM regUser WHERE Email= ? AND Password = ?", 
+    [email, password], 
+    (err,result) => {
+      if(err){
+        console.log(err);
+        res.send({err:err})
+      }
+      if(result.length >0){
+        console.log(result);
+        res.send(result);
+      } else{
+        res.send({message: "User not found!!!"});
+      }
+    });
+})
 
 app.listen(3001, () => {
     console.log("running server");

@@ -52,7 +52,7 @@ app.post("/sign-in",(req,res)=>{
         console.log(err);
         res.send({err:err})
       }
-      if(result){
+      if(result.length >0){
         console.log(result);
         res.send(result);
       } else{

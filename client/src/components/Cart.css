@@ -1,0 +1,33 @@
+.cart-wrapper {
+    /* left: 1200px; */
+    /* min-height: 1000px; */
+    width: 400px;
+    padding: 20px;
+
+}
+
+table img {
+    height: 100px;
+    width: auto;
+}
+
+td, h1, h2, h5{
+    color: black;
+}
+
+table, th, td {
+    /* border: 1px solid; */
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+th,
+td {
+  padding: 10px;
+}
+
+table {
+    /* table-layout: fixed; */
+    width: 100%;
+    border-collapse: collapse;
+    /* border: 3px solid purple; */
+}

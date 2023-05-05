@@ -1,0 +1,86 @@
+.prod-item {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #8a00fc;
+    height: 100px;
+}
+
+.prod-stock p {
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.left-col {
+    align-items: center;
+    padding-right: 2rem;
+    /* padding-left: 2rem; */
+    width: 33%;
+}
+.left-col img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    height: 100px;
+}
+.left-col a:hover img {
+    filter: drop-shadow(2px 8px 4px  #8a00fc);
+    -webkit-transition : -webkit-filter 500ms linear /* yassified boiiiiii */
+}
+
+
+.middle-col {
+    flex: 1;
+    align-items: center; 
+    flex-direction: column;
+    padding-left: 2rem;
+    /* padding-right: 2rem; */
+    max-width: 697px;
+    width: 30%;
+
+}
+.middle-col a {
+    text-decoration: none;
+}
+.middle-col a:hover {
+    text-decoration: underline;
+}
+.middle-col a p {
+    color: blue;
+    font-size: 13px;
+    font-weight: 400;
+}
+.middle-col a:hover p {
+    text-decoration: underline;
+    color: darkblue;
+}
+.rating-stock {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 220px;
+    padding-top: 5px;
+}
+
+
+.name_buy {
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 2rem; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.name_buy p {
+    font-size: 25px;
+    font-weight: 600;
+}
+.name_buy .cta {
+    padding: 4px;
+    width: 200px;
+}
+.name_buy .cta p {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 0;
+}

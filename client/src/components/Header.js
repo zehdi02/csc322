@@ -2,6 +2,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
+import Cart from '../components/Cart'
+import { CartProvider } from "react-use-cart"
+import ItemCard from '../components/ItemCard'
+import testData from "../components/testData"
+
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const cartContainerRef = useRef(null);
@@ -39,6 +45,23 @@ function Header() {
                 <button className="cart-button" onClick={handleClick}>🛒</button>
                 <div className={`cart-container ${isOpen ? 'open' : ''}`}>
                     {/* Cart items will be displayed here */}
+                    <CartProvider>
+                    <Cart />
+                      {/* <div className="prod_browse">
+                          {testData.productData.map((item, index)=> {
+                              return (
+                                  <ItemCard 
+                                      item={item} 
+                                      key={index}
+                                      img={item.img} 
+                                      title={item.title} 
+                                      price={item.price} 
+                                      quantity={item.quantity} 
+                                      rating={item.rating} />
+                              )
+                          })}
+                      </div> */}
+                   </ CartProvider>
                 </div>
             </div>
         </div>

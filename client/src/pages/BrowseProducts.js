@@ -3,8 +3,21 @@ import React from 'react'
 import './BrowseProducts.css'
 
 import MainLayout from '../layout/MainLayout'
+import ItemCard from '../components/ItemCard'
+import testData from "../components/testData"
+import Cart from '../components/Cart'
+
+import { CartProvider } from "react-use-cart"
+
 
 function BrowseProducts() {
+
+    // const[cart, setCart] = useState({});
+
+    console.warn(testData.productData)
+
+
+
   return (
     
     <MainLayout>
@@ -85,92 +98,24 @@ function BrowseProducts() {
                 </div>
             </div>
 
-            <div className="prod_browse">
-                <div className="prod-item" id="prod1">
-                    <div className="left-col">
-                        <a href="#">
-                            <img src="img/products_page/laptop1.jpeg" alt="Product 1" />
-                        </a>
-                    </div>
-                    <div className="middle-col">
-                        <a href="#">
-                            <p>ASUS - Vivobook 14" Laptop - Intel Core 11th Gen i3 with 8GB Memory - 128GB SSD - Transparent Silver</p>
-                        </a>
-                        <div className="rating-stock">
-                            <div className="prod-rating">
-                                <h5>Rating:</h5>
-                                <p id="#">★★★☆☆</p>
-                            </div>
-                            <div className="prod-stock">
-                                <h5>Stock:</h5>
-                                <p id="#">12</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="name_buy">
-                        <p>$199.99</p>
-                        <a href="#" className="cta">
-                            <p>🛒 Add to Cart</p>
-                        </a>
-                    </div>
+            <CartProvider>
+                <div className="prod_browse">
+                    {testData.productData.map((item, index)=> {
+                        return (
+                            <ItemCard 
+                                item={item} 
+                                key={index}
+                                img={item.img} 
+                                title={item.title} 
+                                price={item.price} 
+                                quantity={item.quantity} 
+                                rating={item.rating} />
+                        )
+                    })}
                 </div>
-                <div className="prod-item" id="prod2">
-                    <div className="left-col">
-                        <a href="#">
-                            <img src="img/products_page/laptop6.jpeg" alt="Product 2" />
-                        </a>
-                    </div>
-                    <div className="middle-col">
-                        <a href="#">
-                            <p>ASUS - Vivobook 14" Laptop - Intel Core 11th Gen i3 with 8GB Memory - 128GB SSD - Transparent Silver</p>
-                        </a>
-                        <div className="rating-stock">
-                            <div className="prod-rating">
-                                <h5>Rating:</h5>
-                                <p id="#">★★★☆☆</p>
-                            </div>
-                            <div className="prod-stock">
-                                <h5>Stock:</h5>
-                                <p id="#">12</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="name_buy">
-                        <p>$199.99</p>
-                        <a href="#" className="cta">
-                            <p>🛒 Add to Cart</p>
-                        </a>
-                    </div>
-                </div>
-                <div className="prod-item" id="prod3">
-                    <div className="left-col">
-                        <a href="#">
-                            <img src="img/products_page/laptop5.jpeg" alt="Product 1" />
-                        </a>
-                    </div>
-                    <div className="middle-col">
-                        <a href="#">
-                            <p>ASUS - Vivobook 14" Laptop - Intel Core 11th Gen i3 with 8GB Memory - 128GB SSD - Transparent Silver</p>
-                        </a>
-                        <div className="rating-stock">
-                            <div className="prod-rating">
-                                <h5>Rating:</h5>
-                                <p id="#">★★★☆☆</p>
-                            </div>
-                            <div className="prod-stock">
-                                <h5>Stock:</h5>
-                                <p id="#">12</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="name_buy">
-                        <p>$199.99</p>
-                        <a href="#" className="cta">
-                            <p>🛒 Add to Cart</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                {/* <Cart /> */}
+            </ CartProvider>
+
         </div>
     </MainLayout>
     

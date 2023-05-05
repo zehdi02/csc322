@@ -1,14 +1,28 @@
+.total-clear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.min-add-rem {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    text-align: center;
+}
+
 .cart-wrapper {
     /* left: 1200px; */
     /* min-height: 1000px; */
     width: 400px;
-    padding: 20px;
+    padding: 20px 20px 200px 20px;
 
 }
 
 table img {
-    height: 100px;
-    width: auto;
+    width: 160px;
+    height: auto;
 }
 
 td, h1, h2, h5{

@@ -20,19 +20,29 @@ const Cart = () => {
     if (isEmpty) return <h1 className="">Your Cart is Empty</h1>
     return (
         <div className="cart-wrapper">
-            <h5>Cart ({totalUniqueItems}) total items: ({totalItems})</h5>
+            <div className="total-clear">
+                {/* <h2>Total items: ({totalItems})</h2> */}
+                <h2>Total Price: ${cartTotal}</h2>
+                <button className=""
+                    onClick={() => emptyCart()}>
+                        Clear Cart
+                </button>
+            </div>
+            <div>
+                
+            </div>
             <table className="cart-table">
                 <tbody>
                     {items.map((item, index)=>{
                         return (
                             <tr key={index}>
                                 <td>
-                                    <img src={item.img} style={{height: '6rem'}} />
+                                    <img src={item.img} />
                                 </td>
                                 <td>{item.title}</td>
                                 <td>{item.price}</td>
-                                <td>Quantity: {item.quantity}</td>
-                                <td>
+                                <td>#{item.quantity}</td>
+                                <td className="min-add-rem">
                                     <button className=""
                                     onClick={() => updateItemQuantity(item.id, item.quantity -1)}
                                     >-</button>
@@ -48,15 +58,7 @@ const Cart = () => {
                     })}
                 </tbody>
             </table>
-            <div>
-                <h2>Total Price: {cartTotal}</h2>
-            </div>
-            <div>
-                <button className=""
-                onClick={() => emptyCart()}>
-                    Clear Cart
-                </button>
-            </div>
+            
         </div>
     )
 }

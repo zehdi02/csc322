@@ -8,16 +8,14 @@ import testData from "../components/testData"
 
 import Cart from '../components/Cart'
 import { CartProvider } from "react-use-cart"
+
 import Filter_cat from '../components/filter/Filter_cat'
+import Filter_brand from '../components/filter/Filter_brand'
 
 
 function BrowseProducts() {
-
     // const[cart, setCart] = useState({});
-
     console.warn(testData.productData)
-
-
 
   return (
     
@@ -42,33 +40,30 @@ function BrowseProducts() {
                 <div className="cat">
                     <h3>CATEGORY</h3>
                     <div className="catBox">
-                        
-                    {testData.productData.map((item, index)=> {
-                    return (
-                            <Filter_cat 
-                                item={item} 
-                                key={index}
-                                cat={item.cat} />
-                        )
-                    })}
+                    {/* {testData.productData.map((item, index)=> { */}
+                        {
+                            [...new Set(testData.productData.map(item => item.cat))].map((cat, index) => (
+                                <Filter_cat 
+                                    cat={cat} 
+                                    key={index} 
+                                />
+                            ))
+                        }
                     </div>
                 </div>
 
                 <div className="brand">
                     <h3 > BRAND </h3>
                     <div className="brandBox">
-                            <label>
-                                <input type="checkbox" name="brand" value="option1" />
-                                Brand A
-                            </label>
-                            <label>
-                                <input type="checkbox" name="beand" value="option2" />
-                                Brand B
-                            </label>
-                            <label>
-                                <input type="checkbox" name="brandp" value="option3" />
-                                Brand C
-                            </label>
+                    {/* {testData.productData.map((item, index)=> { */}
+                        {
+                            [...new Set(testData.productData.map(item => item.brand))].map((brand, index) => (
+                                <Filter_brand
+                                    brand={brand} 
+                                    key={index} 
+                                />
+                            ))
+                        }
                     </div>
                 </div>
 

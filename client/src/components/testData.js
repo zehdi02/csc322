@@ -1,19 +1,25 @@
 import cpu1 from '../img/products_page/cpu1.png'
-import motherboard1 from '../img/products_page/motherboard1.png'
-import ram1 from '../img/products_page/ram1.png'
-import ssd1 from '../img/products_page/ssd1.jpg'
-import case1 from '../img/products_page/case1.png'
-import cooler1 from '../img/products_page/cooler1.png'
-import gpu1 from '../img/products_page/gpu1.png'
-import hdd1 from '../img/products_page/hdd1.jpg'
-import psu1 from '../img/products_page/psu1.png'
-
 import cpu2 from '../img/products_page/cpu2.jpg'
+
+import motherboard1 from '../img/products_page/motherboard1.png'
 import motherboard2 from '../img/products_page/motherboard2.png'
+
+import ram1 from '../img/products_page/ram1.png'
 import ram2 from '../img/products_page/ram2.png'
+
+import ssd1 from '../img/products_page/ssd1.jpg'
+import hdd1 from '../img/products_page/hdd1.jpg'
+
+import case1 from '../img/products_page/case1.png'
 import case2 from '../img/products_page/case2.png'
+
+import cooler1 from '../img/products_page/cooler1.png'
 import cooler2 from '../img/products_page/cooler2.png'
+
+import gpu1 from '../img/products_page/gpu1.png'
 import gpu2 from '../img/products_page/gpu2.png'
+
+import psu1 from '../img/products_page/psu1.png'
 import psu2 from '../img/products_page/psu2.png'
 
 const testData = {
@@ -25,8 +31,8 @@ const testData = {
             desc: 'actually a chad laptop',
             quantity: '69',
 
-            cat: 'cpu',
-            brand: '',
+            cat: 'CPU',
+            brand: 'Ryzen',
             price: '249.00',
             rating: '★★★★★',
         },
@@ -37,8 +43,8 @@ const testData = {
             desc: 'actually a chad laptop',
             quantity: '69',
 
-            cat: 'cpu',
-            brand: '',
+            cat: 'CPU',
+            brand: 'Intel',
             price: '399.99',
             rating: '★★★★★',
         },
@@ -50,8 +56,8 @@ const testData = {
             desc: 'actually a poopoo laptop',
             quantity: '420',
 
-            cat: 'motherboard',
-            brand: '',
+            cat: 'Motherboard',
+            brand: 'MSI',
             price: '157.99',
             rating: '★★★☆☆',
         },
@@ -62,8 +68,8 @@ const testData = {
             desc: 'actually a poopoo laptop',
             quantity: '420',
 
-            cat: 'motherboard',
-            brand: '',
+            cat: 'Motherboard',
+            brand: 'MSI',
             price: '179.99',
             rating: '★★★☆☆',
         },
@@ -75,8 +81,8 @@ const testData = {
             desc: 'k',
             quantity: '707',
 
-            cat: 'ram',
-            brand: '',
+            cat: 'RAM',
+            brand: 'CORSAIR',
             price: '69.99',
             rating: '★★★★☆',
         },
@@ -87,8 +93,8 @@ const testData = {
             desc: 'k',
             quantity: '707',
 
-            cat: 'ram',
-            brand: '',
+            cat: 'RAM',
+            brand: 'CORSAIR',
             price: '82.99',
             rating: '★★★★☆',
         },
@@ -100,8 +106,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'ssd',
-            brand: '',
+            cat: 'SSD',
+            brand: 'Samsung',
             price: '119.99',
             rating: '★★★★★',
         },
@@ -112,8 +118,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'hdd',
-            brand: '',
+            cat: 'HDD',
+            brand: 'WD',
             price: '68.99',
             rating: '★★★★★',
         },
@@ -125,8 +131,8 @@ const testData = {
             desc: '',
             quantity: '7331',
 
-            cat: 'case',
-            brand: '',
+            cat: 'Case',
+            brand: 'CORSAIR',
             price: '129.99',
             rating: '★★★★★',
         },
@@ -137,8 +143,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'case',
-            brand: '',
+            cat: 'Case',
+            brand: 'NZXT',
             price: '129.99',
             rating: '★★★★★',
         },
@@ -150,8 +156,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'cooler',
-            brand: '',
+            cat: 'Cooler',
+            brand: 'NZXT',
             price: '154.99',
             rating: '★★★★★',
         },
@@ -162,8 +168,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'cooler',
-            brand: '',
+            cat: 'Cooler',
+            brand: 'NZXT',
             price: '219.99',
             rating: '★★★★★',
         },
@@ -175,8 +181,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'gpu',
-            brand: '',
+            cat: 'GPU',
+            brand: 'NVIDIA',
             price: '369.99',
             rating: '★★★★★',
         },
@@ -187,8 +193,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'gpu',
-            brand: '',
+            cat: 'GPU',
+            brand: 'GIGABYTE',
             price: '369.99',
             rating: '★★★★★',
         },
@@ -200,8 +206,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'psu',
-            brand: '',
+            cat: 'PSU',
+            brand: 'CORSAIR',
             price: '99.99',
             rating: '★★★★★',
         },
@@ -212,8 +218,8 @@ const testData = {
             desc: 'its a mmk laptop',
             quantity: '7331',
 
-            cat: 'psu',
-            brand: '',
+            cat: 'PSU',
+            brand: 'CORSAIR',
             price: '189.99',
             rating: '★★★★★',
         },

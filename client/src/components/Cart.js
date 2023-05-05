@@ -17,11 +17,11 @@ const Cart = () => {
         emptyCart,
     } = useCart();
 
-    if (isEmpty) return <h1 className="">Your Cart is Empty</h1>
+    // if (isEmpty) return <h1 className="">Cart is Empty</h1>
     return (
         <div className="cart-wrapper">
             <div className="total-clear">
-                {/* <h2>Total items: ({totalItems})</h2> */}
+                <h2>{totalItems}🛒</h2>
                 <h2>Total Price: ${cartTotal}</h2>
                 <button className=""
                     onClick={() => emptyCart()}>

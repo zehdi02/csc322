@@ -7,6 +7,8 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import BuildPC from './pages/BuildPC';
 
+import ProductDemo from './pages/Products/ProductDemo';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,7 +33,11 @@ const router = createBrowserRouter([
     {
       path: "build-pc",
       element: <BuildPC />,
-    }
+    },
+    {
+      path: "product-demo",
+      element: <ProductDemo />,
+    },
   ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

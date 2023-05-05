@@ -37,7 +37,7 @@ function Header() {
         <div className="logo-search-cart">
             <Link to="/" className="logo">
                 <a href="#">
-                    <img src="img/o-comps_logo2.png" alt="O-CompS Logo" />
+                    <img src={require('../img/o-comps_logo2.png')} alt="O-CompS Logo" />
                 </a>
             </Link>
             <input type="text" placeholder="Search" className="search-bar" />

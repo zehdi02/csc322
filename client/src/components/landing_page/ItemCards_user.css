@@ -1,0 +1,60 @@
+
+#products {
+
+}
+
+#personal_products .cta {
+    /* padding: 0 60px; */
+    padding: 10px 20px;
+    width: 240px;
+    height: auto;
+}
+
+#personal_products h2 {
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.personal-deals {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 0 40px;
+}
+.personal-prod {
+/* 
+    max-width: 300px;
+    max-height: 300px;
+
+    padding: 20px 20px 15px 20px;
+    text-align: center;
+    
+    border: 1px solid #e2e2e2;
+    border-radius: 5px; */
+
+    padding: 20px 20px 15px 20px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 260px;
+}
+.personal-prod img {
+    max-height: 120px;
+}
+
+.personal-prod p {
+    padding-top: 5px;
+    font-size: 13px;
+    color: blue;
+}
+
+.personal-prod a {
+    text-decoration: none;
+}
+.personal-prod a:hover p{
+    text-decoration: underline;
+    color: darkblue;
+}

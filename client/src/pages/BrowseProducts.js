@@ -5,9 +5,10 @@ import './BrowseProducts.css'
 import MainLayout from '../layout/MainLayout'
 import ItemCard from '../components/ItemCard'
 import testData from "../components/testData"
-import Cart from '../components/Cart'
 
+import Cart from '../components/Cart'
 import { CartProvider } from "react-use-cart"
+import Filter_cat from '../components/filter/Filter_cat'
 
 
 function BrowseProducts() {
@@ -25,25 +26,31 @@ function BrowseProducts() {
         <div className="prod-wrapper" >
 
             <div className="filter">
+                {/* {testData.productData.map((item, index)=> {
+                    return (
+                        <ItemCard 
+                            item={item} 
+                            key={index}
+                            img={item.img} 
+                            title={item.title} 
+                            price={item.price} 
+                            quantity={item.quantity} 
+                            rating={item.rating} />
+                    )
+                })} */}
+
                 <div className="cat">
                     <h3>CATEGORY</h3>
                     <div className="catBox">
-                        <label>
-                            <input type="checkbox" name="cat" value="option1" />
-                            Category A
-                        </label>
-                        <label>
-                            <input type="checkbox" name="cat" value="option2" />
-                            Category B
-                        </label>
-                        <label>
-                            <input type="checkbox" name="cat" value="option3" />
-                            Category C
-                        </label>
-                        <label>
-                            <input type="checkbox" name="cat" value="option4" />
-                            Category D
-                        </label>
+                        
+                    {testData.productData.map((item, index)=> {
+                    return (
+                            <Filter_cat 
+                                item={item} 
+                                key={index}
+                                cat={item.cat} />
+                        )
+                    })}
                     </div>
                 </div>
 

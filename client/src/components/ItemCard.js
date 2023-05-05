@@ -33,7 +33,7 @@ const ItemCard = (props) => {
                 {/* <a href="#" className="cta">
                     <p></p>
                 </a> */}
-                <button className="" 
+                <button className="bt" 
                 onClick={() => addItem(props.item)}
                 >🛒 Add to Cart
                 </button>

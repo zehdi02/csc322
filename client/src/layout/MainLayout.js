@@ -13,9 +13,11 @@ function MainLayout({children}) {
             <div className="content_wrap">
                 <div>{children}</div>
                 <ChatBox />
+          
             </div>
-          <Footer />
+            <Footer />
         </div>
+        
     </div>
   )
 }

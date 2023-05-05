@@ -1,0 +1,54 @@
+
+/* O-CompS' best selling products */
+#deals {
+    padding-bottom: 40px;
+}
+
+#deals h2 {
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#deals .cta {
+    width: 240px;
+    height: auto;
+}
+
+.bestselling_deals {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 0 100px;
+}
+
+.bestselling_deals img {
+    max-height: 200px;
+}
+
+.best_deal {
+    padding: 20px 20px 15px 20px;
+
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 260px;
+}
+
+.best_deal p {
+    padding-top: 5px;
+    font-size: 13px;
+    color: blue;
+}
+
+.best_deal a {
+    text-decoration: none;
+}
+.best_deal a:hover p{
+    text-decoration: underline;
+    color: darkblue;
+}

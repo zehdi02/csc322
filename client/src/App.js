@@ -5,7 +5,15 @@ import './App.css'
 
 import MainLayout from './layout/MainLayout';
 
+import testData from './components/testData';
+import ItemCards_new from './components/landing_page/ItemCards_new';
+import ItemCards_deal from './components/landing_page/ItemCards_deal';
+import ItemCards_user from './components/landing_page/ItemCards_user';
+
 function App() {
+
+    console.warn(testData.productData)
+
   return (
   <MainLayout>
     <div class="border"></div>
@@ -21,94 +29,35 @@ function App() {
     <section id="personal_products">
         <h2>Based on your recent history</h2>
         <div className="personal-deals">
-            <div className="personal-prod">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>Lenovo - Legion Pro 5i 16" - 82WK0069US - Onyx Grey</p>
-                </a>
-            </div>
-            <div className="personal-prod">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>Arcade1up The Fast & The Furious Deluxe Arcade Game</p>
-                </a>
-            </div>
-            <div className="personal-prod">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>Conair - Magnetic Head Trimmer - Silver</p>
-                </a>
-            </div>
-            <div className="personal-prod">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>Apple - iPhone 13 5G 128GB (Unlocked) - Midnight</p>
-                </a>
-            </div>
-            <div className="personal-prod">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>Frigidaire - Gallery 1.9 Cu. Ft. Over-the Range Microwave</p>
-                </a>
-            </div>
+            {testData.productData.map((item, index)=> {
+                return (
+                    <ItemCards_user
+                        item={item} 
+                        key={index}
+                        img={item.img} 
+                        title={item.title} 
+                    />
+                )
+            })}
         </div>
     </section>
 
     <div class="border-thin"></div>
 
-    <section id="products">
+    <section id="new-products">
         <h2>Our Newest Releases</h2>
-        <div className="new_prod_container">
-            <div className="new_prod">
-                <a class="cta" href="#">
-                    <img src="img/landing_page/new_product_1.avif" alt="Product 1"/>
-                </a>
-                <a href="#">
-                    <h3>Product 1</h3>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" className="cta">Learn More</a>
-            </div>
-            <div className="new_prod">
-                <a class="cta" href="#">
-                    <img src="img/landing_page/new_product_2.avif" alt="Product 2"/>
-                </a>
-                <a href="#">
-                    <h3>Product 2</h3>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" className="cta">Learn More</a>
-            </div>
-            <div className="new_prod">
-                <a className="cta" href="#">
-                    <img src="img/landing_page/new_product_3.avif" alt="Product 3"/>
-                </a>
-                <a href="#">
-                    <h3>Product 3</h3>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" className="cta">Learn More</a>
-            </div>
-            <div className="new_prod">
-                <a className="cta" href="#">
-                    <img src="img/landing_page/new_product_3.avif" alt="Product 4"/>
-                </a>
-                <a href="#">
-                    <h3>Product 4</h3>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" className="cta">Learn More</a>
-            </div>
+        <div className="newP">
+            {testData.productData.map((item, index)=> {
+                return (
+                    <ItemCards_new
+                        item={item} 
+                        key={index}
+                        img={item.img} 
+                        title={item.title} 
+                        desc={item.desc}
+                    />
+                )
+            })}
         </div>
     </section>
 
@@ -117,40 +66,19 @@ function App() {
     <section id="deals">
         <h2>Shop our Bestsellers</h2>
         <div className="bestselling_deals">
-            <div className="best_deal">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>SUPER DUPER POWERFUL PC 3000</p>
-                </a>
-            </div>
-            <div className="best_deal">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_2.avif" alt="Deal 2"/>
-                </a>
-                <a href="#">
-                    <p>SUPER DUPER POWERFUL PC 69000</p>
-                </a>
-            </div>
-            <div className="best_deal">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_3.avif" alt="Deal 3"/>
-                </a>
-                <a href="#">
-                    <p>SUPER DUPER POWERFUL PC 420000</p>
-                </a>
-            </div>
-            <div className="best_deal">
-                <a href="#" className="cta">
-                    <img src="img/landing_page/bestseller_product_1.avif" alt="Deal 1"/>
-                </a>
-                <a href="#">
-                    <p>WHITE</p>
-                </a>
-            </div>
+            {testData.productData.map((item, index)=> {
+                return (
+                    <ItemCards_deal
+                        item={item} 
+                        key={index}
+                        img={item.img} 
+                        title={item.title} 
+                    />
+                )
+            })}
         </div>
     </section>
+    
   </MainLayout>
   );
 }

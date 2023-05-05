@@ -33,7 +33,7 @@ function ChatBox() {
   return (
     <div id="chat-bot">
       <div id="chat-icon" onClick={toggleChatWindowDisplay}>
-        <img src="img/chat_employee.png" alt="Chat Icon" />
+        <img src={require('../img/chat_employee.png')} alt="Chat Icon" />
       </div>
       <div id="chat-window" style={{ display: chatWindowDisplay ? 'block' : 'none' }}>
         {messages.map((message, index) => (

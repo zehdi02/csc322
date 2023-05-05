@@ -9,12 +9,12 @@ const ItemCard = (props) => {
     return (
         <div className="prod-item" id="prod1">
             <div className="left-col">
-                <a href="#">
+                <a href="product-demo">
                     <img src={props.img} alt="Product 1" />
                 </a>
             </div>
             <div className="middle-col">
-                <a href="#">
+                <a href="product-demo">
                     <p>{props.title}</p>
                 </a>
                 <div className="rating-stock">

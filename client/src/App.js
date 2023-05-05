@@ -5,7 +5,7 @@ import './App.css'
 
 import MainLayout from './layout/MainLayout';
 
-import testData from './components/testData';
+import testData from './components/browse/testData';
 import ItemCards_new from './components/landing_page/ItemCards_new';
 import ItemCards_deal from './components/landing_page/ItemCards_deal';
 import ItemCards_user from './components/landing_page/ItemCards_user';

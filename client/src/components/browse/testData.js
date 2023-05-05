@@ -1,26 +1,26 @@
-import cpu1 from '../img/products_page/cpu1.png'
-import cpu2 from '../img/products_page/cpu2.jpg'
+import cpu1 from '../../img/products_page/cpu1.png'
+import cpu2 from '../../img/products_page/cpu2.jpg'
 
-import motherboard1 from '../img/products_page/motherboard1.png'
-import motherboard2 from '../img/products_page/motherboard2.png'
+import motherboard1 from '../../img/products_page/motherboard1.png'
+import motherboard2 from '../../img/products_page/motherboard2.png'
 
-import ram1 from '../img/products_page/ram1.png'
-import ram2 from '../img/products_page/ram2.png'
+import ram1 from '../../img/products_page/ram1.png'
+import ram2 from '../../img/products_page/ram2.png'
 
-import ssd1 from '../img/products_page/ssd1.jpg'
-import hdd1 from '../img/products_page/hdd1.jpg'
+import ssd1 from '../../img/products_page/ssd1.jpg'
+import hdd1 from '../../img/products_page/hdd1.jpg'
 
-import case1 from '../img/products_page/case1.png'
-import case2 from '../img/products_page/case2.png'
+import case1 from '../../img/products_page/case1.png'
+import case2 from '../../img/products_page/case2.png'
 
-import cooler1 from '../img/products_page/cooler1.png'
-import cooler2 from '../img/products_page/cooler2.png'
+import cooler1 from '../../img/products_page/cooler1.png'
+import cooler2 from '../../img/products_page/cooler2.png'
 
-import gpu1 from '../img/products_page/gpu1.png'
-import gpu2 from '../img/products_page/gpu2.png'
+import gpu1 from '../../img/products_page/gpu1.png'
+import gpu2 from '../../img/products_page/gpu2.png'
 
-import psu1 from '../img/products_page/psu1.png'
-import psu2 from '../img/products_page/psu2.png'
+import psu1 from '../../img/products_page/psu1.png'
+import psu2 from '../../img/products_page/psu2.png'
 
 const testData = {
     productData: [

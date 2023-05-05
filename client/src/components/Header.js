@@ -4,8 +4,8 @@ import './Header.css';
 
 import Cart from '../components/Cart'
 import { CartProvider } from "react-use-cart"
-import ItemCard from '../components/ItemCard'
-import testData from "../components/testData"
+import ItemCard from './browse/ItemCard'
+import testData from "../components/browse/testData"
 
 
 function Header() {
@@ -42,27 +42,28 @@ function Header() {
             </Link>
             <input type="text" placeholder="Search" className="search-bar" />
             <div className="cart" ref={cartContainerRef}>
-                <button className="cart-button" onClick={handleClick}>🛒</button>
-                <div className={`cart-container ${isOpen ? 'open' : ''}`}>
-                    {/* Cart items will be displayed here */}
-                    <CartProvider>
+              <button className="cart-button" onClick={handleClick}>🛒</button>
+              <div className={`cart-container ${isOpen ? 'open' : ''}`}>
+                  {/* Cart items will be displayed here */}
+                  <CartProvider>
                     <Cart />
-                      {/* <div className="prod_browse">
-                          {testData.productData.map((item, index)=> {
-                              return (
-                                  <ItemCard 
-                                      item={item} 
-                                      key={index}
-                                      img={item.img} 
-                                      title={item.title} 
-                                      price={item.price} 
-                                      quantity={item.quantity} 
-                                      rating={item.rating} />
-                              )
-                          })}
-                      </div> */}
-                   </ CartProvider>
-                </div>
+
+                    {/* <div className="prod_browse">
+                        {testData.productData.map((item, index)=> {
+                            return (
+                                <ItemCard 
+                                    item={item} 
+                                    key={index}
+                                    img={item.img} 
+                                    title={item.title} 
+                                    price={item.price} 
+                                    quantity={item.quantity} 
+                                    rating={item.rating} />
+                            )
+                        })}
+                    </div> */}
+                  </ CartProvider>
+              </div>
             </div>
         </div>
 
@@ -70,7 +71,7 @@ function Header() {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/browse-products">Products</Link></li>
-                <li><a href="#">Build a PC</a></li>
+                <li><Link to="/build-pc">Build a PC</Link></li>
                 <li><a href="#">About Us</a></li>
                 {/* <li><a href="#">Contact Us</a></li>  */}
                 {/* <li><a href="#">Purchase History</a></li> */}

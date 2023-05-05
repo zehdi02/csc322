@@ -43,6 +43,7 @@
 }
 .personal-prod img {
     max-height: 120px;
+    max-width: 90%;
 }
 
 .personal-prod p {

@@ -1,0 +1,65 @@
+.build-grid {
+    /* align-items: center; */
+    /* padding-right: 2rem; */
+    /* padding-left: 2rem; */
+    /* width: 33%; */
+
+    text-align: center;
+    /* align-items: center; */
+    /* max-width: 300px; */
+    /* max-height: 300px; */
+    
+}
+.build-grid img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 70%;
+    /* height: 200px;
+    /* height: auto; */
+}
+.build-grid a:hover img {
+    /* filter: drop-shadow(2px 8px 4px  #8a00fc);
+    -webkit-transition : -webkit-filter 500ms linear  */
+}
+
+.build-prod {
+    /* max-width: 80%;
+    height: auto; */
+    /* background-color: #c175ff86; */
+    text-align: center;
+    align-self: center; /* Align vertically */
+    justify-self: center; /* Align horizontally */
+
+    width: 50%; 
+    height: 90%; 
+    /* padding-bottom: 75%; */
+    /* position: relative; */
+    overflow: hidden; /* Hide any overflowing content */
+
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 20px;
+}
+.build-grid .cta {
+    padding: 20px;
+    max-width: 300px;
+    cursor: pointer;
+}
+.build-grid a, 
+.build-grid h3 {
+    padding-top: 5px;
+}
+.build-grid h3 {
+
+}
+.build-grid a {
+    font-size: 13px;
+    text-decoration: none;
+    color: blue;
+}
+.build-grid a:hover {
+    text-decoration: underline;
+}

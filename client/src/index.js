@@ -5,6 +5,7 @@ import App from './App';
 import BrowseProducts from './pages/BrowseProducts';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import BuildPC from './pages/BuildPC';
 
 import {
   createBrowserRouter,
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       path: "sign-up",
       element: <SignUp />,
     },
+    {
+      path: "build-pc",
+      element: <BuildPC />,
+    }
   ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

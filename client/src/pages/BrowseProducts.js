@@ -3,8 +3,8 @@ import React from 'react'
 import './BrowseProducts.css'
 
 import MainLayout from '../layout/MainLayout'
-import ItemCard from '../components/ItemCard'
-import testData from "../components/testData"
+import ItemCard from '../components/browse/ItemCard'
+import testData from "../components/browse/testData"
 
 import Cart from '../components/Cart'
 import { CartProvider } from "react-use-cart"
@@ -24,23 +24,9 @@ function BrowseProducts() {
         <div className="prod-wrapper" >
 
             <div className="filter">
-                {/* {testData.productData.map((item, index)=> {
-                    return (
-                        <ItemCard 
-                            item={item} 
-                            key={index}
-                            img={item.img} 
-                            title={item.title} 
-                            price={item.price} 
-                            quantity={item.quantity} 
-                            rating={item.rating} />
-                    )
-                })} */}
-
                 <div className="cat">
                     <h3>CATEGORY</h3>
                     <div className="catBox">
-                    {/* {testData.productData.map((item, index)=> { */}
                         {
                             [...new Set(testData.productData.map(item => item.cat))].map((cat, index) => (
                                 <Filter_cat 
@@ -55,7 +41,6 @@ function BrowseProducts() {
                 <div className="brand">
                     <h3 > BRAND </h3>
                     <div className="brandBox">
-                    {/* {testData.productData.map((item, index)=> { */}
                         {
                             [...new Set(testData.productData.map(item => item.brand))].map((brand, index) => (
                                 <Filter_brand

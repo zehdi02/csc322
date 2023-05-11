@@ -12,6 +12,19 @@
             "database": "WebsiteDB",
             "username": "root",
             "password": "password"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "csc332-db.ccnbxjalqhpm.us-east-2.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "csc336",
+            "database": "CSC332",
+            "password": "Verald123",
+            "username": "admin"
         }
     ]
 }

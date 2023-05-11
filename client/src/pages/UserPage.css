@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+.userpage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.userpage-container h1 {
+    padding-bottom: 10px;
+}
+.userpage-form {
+    padding-bottom: 10px;
+    width: 300px;
+}
+.userpage-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+.userpage-form button {
+    padding: 8px;
+    width: 100%;
+    background-color: #8a00fc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+}
+.userpage-form button:hover {
+    background-color: #6200b3;
+}
+.userpage-form p {
+    margin-top: 10px;
+    text-align: center;
+}
+.userpage-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+.userpage-form a:hover {
+    text-decoration: underline;
+}
+
+.userpage-navbar{
+    padding-bottom: 10px;
+}
+.userpage-navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  
+.userpage-navbar li {
+    display: inline;
+    float: left;
+  } 
+  
+.userpage-navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+  }
+.userpage-navbar li a:hover {
+    background-color: #555;
+    color: white;
+  }
+  @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+  .userwallet-body{
+  color: #484848;
+  font-family: 'Lato', sans-serif;
+  padding: 1em;
+  line-height: 1.5;
+
+  }
+  .userwallet-body flex {
+    background: #fdfdfd;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    border-radius:5px;
+  }
+  .userwallet-body element-center {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  
+  .userwallet-body typewrite {
+      font-size: 16pt;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .userwallet-body h1 {
+      font-size: 2em;
+      margin: 0;
+      margin-top: 0.3em;
+  }
+  
+  #userwallet-body inputs {
+      padding: 10px;
+  }
+  
+  input,
+  .userwallet-body button {
+    font-size: .85em;
+    padding: .65em 1em;
+    border-radius: .3em;
+    outline: 0;
+  }
+  .userwallet-body input {
+    border: 2px solid #dcdcdc;
+    margin-right: 1em;
+  }
+  
+  .userwallet-body button {
+      color: white;
+      background: #508abc;
+      border: solid 1px;
+      border-color: rgba(0, 0, 0, .1);
+      cursor: pointer;
+  }
+  
+  .userwallet-body label {
+      font-size: 2em;
+  }
+  
+  #btnDeposit, #btnWithdraw {
+      width: 8em;
+  }

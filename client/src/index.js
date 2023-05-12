@@ -6,7 +6,7 @@ import BrowseProducts from './pages/BrowseProducts';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import BuildPC from './pages/BuildPC';
-
+import UserPage from './pages/UserPage';
 import ProductDemo from './pages/Products/ProductDemo';
 
 import {
@@ -37,6 +37,10 @@ const router = createBrowserRouter([
     {
       path: "product-demo",
       element: <ProductDemo />,
+    },
+    {
+      path: "user-page",
+      element: <UserPage />,
     },
   ]);
 

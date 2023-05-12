@@ -38,8 +38,8 @@ function SignIn() {
          localStorage.setItem("Phone#",data.Phone);
          localStorage.setItem("email",data.Email);
          localStorage.setItem("LoginStatus",true);  
-         localStorage.setItem("wallet",data.Wallet);   
-      
+         localStorage.setItem("wallet",data.Wallet);  
+         localStorage.setItem("id",data.userid); 
          console.log(window.loginStatus);
          navigate('/user-page');     
         }

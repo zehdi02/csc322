@@ -13,24 +13,48 @@ function ChatBox() {
     setChatWindowDisplay(!chatWindowDisplay);
   };
 
+  const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt", "faggot", "bastard", "nigga", "fuc"]; 
+
+    //filter for users i.e.. replaces bad words with stars and sends
   function filterBadWords(text) {
-    const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt","bitch", "nigga"]; 
     const regex = new RegExp(taboolist.join("|"), "gi");
     const cleanText = text.replace(regex, "*****"); 
     return cleanText;
   }
-  
+
+    //filter for visitors i.e.. cannot send bad words at all
+    function Visitorfilter(text) {
+      const regex = new RegExp(taboolist.join("|"), "gi");
+      const vfiltered = text.replace(regex, ""); 
+      return vfiltered;
+    }
+
+  // get login status
+  const loginstat = localStorage.getItem("LoginStatus");
 
   const handleUserInput = (event) => {
     const usermessage = event.target.value;
-    const filteredMessage = filterBadWords(usermessage);
-  //  if (filteredMessage === "") {return;}
-    setUserInput(filteredMessage);
+    setUserInput(usermessage);
   };
 
   const handleSendMessage = () => {
+    //if statement to prevent users from sending empty messages
+    if (userInput !== ''){
     setMessages([...messages, { sender: 'You', message: userInput }]);
     setUserInput('');
+
+    // if (user is logged in == user is registered) {send bad word in ***s}
+    if (loginstat)
+    {
+      setMessages([...messages, { sender: 'You', message: filterBadWords(userInput) }]);
+      setUserInput('');
+    }
+    // else if(user is not logged in == user is not registered) {delete bad word message}
+    else
+    {
+      setMessages([...messages, { sender: 'You', message: Visitorfilter(userInput) }]);
+      setUserInput('');
+    }}
   };
 
   const handleKeyDown = (event) => {

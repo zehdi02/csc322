@@ -30,7 +30,7 @@ function UserPage(){
         and is usually already 2
         */
       });
-      let formatBalance=useState(formatter.format(totalbalance));
+    let formatBalance=useState(formatter.format(totalbalance));
     
     //Display Account HTML
     const AccountInfo=()=>{

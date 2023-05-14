@@ -20,16 +20,7 @@ const Cart_checkout = () => {
 
     let totalbalance=localStorage.getItem("wallet");
     //Format numeber
-    const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-        minimumFractionDigits: 2,
-        /* 
-        the default value for minimumFractionDigits depends on the currency
-        and is usually already 2
-        */
-      });
-    let formatBalance=useState(formatter.format(totalbalance));
+    
 
     const [balance, setBalance] = useState(parseFloat(localStorage.getItem('wallet')) || 0);
 
@@ -54,14 +45,26 @@ const Cart_checkout = () => {
     // add commas every 3rd digit for the user balance
     const formatBalanceWithCommas = (balance) => {
         return balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      };
+    };
+
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+        /* 
+        the default value for minimumFractionDigits depends on the currency
+        and is usually already 2
+        */
+      });
+    let formatBalance=useState(formatter.format(balance));
+
     return (
         <div className="cart-wrapper">
             
             <div className='checkout-cont'>
                 <div className="user-wallet">
                     <h3>Your Balance:</h3>
-                    <label>${formatBalanceWithCommas(balance)}</label>
+                    <label>{formatBalance}</label>
                 </div>
                 <div className='payup'>
                     <a href='#'>

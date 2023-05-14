@@ -96,7 +96,7 @@ nav ul li a:hover {
     position: fixed;
     top: 66px;
     right: -500px;
-    width: 500px;
+    width: 490px;
     height: 100%;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
@@ -106,6 +106,7 @@ nav ul li a:hover {
   }
 .cart-container.open {
     right: 0;
+    padding: 0 0 20px 20px;
 }
 
 .overlay {

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CommentSection from '../../components/browse/commentSection';
 import cpu1 from '../../img/products_page/cpu1.png';
 import MainLayout from '../../layout/MainLayout'
 import './Product.css'
@@ -28,12 +28,9 @@ function product() {
                     </div>
                 </div>
             </div>
-            <div class="product-reviews-container">
-                <div class="product-reviews">
-                    <h2>Product Reviews</h2>
-                    <p>Customer reviews and ratings will be displayed here.</p>
-                    <button>Write a Review</button>
-                </div>
+                <div class="product-reviews-container">
+                {/*<h1>Comments</h1>*/}
+            <   CommentSection />
             </div>
         </MainLayout>
     )

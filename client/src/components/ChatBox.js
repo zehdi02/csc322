@@ -13,12 +13,22 @@ function ChatBox() {
     setChatWindowDisplay(!chatWindowDisplay);
   };
 
+  function filterBadWords(text) {
+    const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt","bitch", "nigga"]; 
+    const regex = new RegExp(taboolist.join("|"), "gi");
+    const cleanText = text.replace(regex, "*****"); 
+    return cleanText;
+  }
+  
+
   const handleUserInput = (event) => {
-    setUserInput(event.target.value);
+    const usermessage = event.target.value;
+    const filteredMessage = filterBadWords(usermessage);
+  //  if (filteredMessage === "") {return;}
+    setUserInput(filteredMessage);
   };
 
   const handleSendMessage = () => {
-    // Send message
     setMessages([...messages, { sender: 'You', message: userInput }]);
     setUserInput('');
   };
@@ -29,6 +39,7 @@ function ChatBox() {
       handleSendMessage();
     }
   };
+
 
   return (
     <div id="chat-bot">

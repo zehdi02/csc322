@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import {useCart } from "react-use-cart";
 import {CartProvider} from "react-use-cart"
 
@@ -17,15 +18,21 @@ const Cart = () => {
         emptyCart,
     } = useCart();
 
-    // if (isEmpty) return <h1 className="">Cart is Empty</h1>
+    const roundedTotalPrice = cartTotal.toFixed(2); // Round the total price to 2 decimal places
+
     return (
         <div className="cart-wrapper">
             <div className="total-clear">
                 <h2>{totalItems}🛒</h2>
-                <h2>Total Price: ${cartTotal}</h2>
+                <h2 id="total-price">Total Price: ${roundedTotalPrice}</h2>
                 <button className=""
                     onClick={() => emptyCart()}>
                         Clear Cart
+                </button>
+                <button id="checkout">
+                    <Link to="/checkout">
+                        Checkout
+                    </Link>
                 </button>
             </div>
             <div>
@@ -39,9 +46,13 @@ const Cart = () => {
                                 <td>
                                     <img src={item.img} />
                                 </td>
-                                <td>{item.title}</td>
-                                <td>{item.price}</td>
-                                <td>#{item.quantity}</td>
+                                <td>
+                                    <p className="prod-title">{item.title}</p>
+                                </td>
+                                <td className="price-quantity">
+                                    <p>${item.price}</p>
+                                    <p>#{item.quantity}</p>
+                                </td>
                                 <td className="min-add-rem">
                                     <button className=""
                                     onClick={() => updateItemQuantity(item.id, item.quantity -1)}

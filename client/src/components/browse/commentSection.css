@@ -1,0 +1,48 @@
+.heading {
+    text-align: center;
+}
+
+  .comment-item {
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .input-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .name-box,
+  .comment-box {
+    width: 800px;
+    min-width: 400px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  button[type="submit"] {
+    
+    font-size: 18px; 
+    margin-bottom: 10px;
+  }
+  
+  .comment-box{
+    height: 250px;
+  }
+  
+  .comment-list {
+    max-height: 350px; 
+    overflow-y: auto;
+  }
+
+  .comment-section-container {
+    max-width: 1000px; 
+    max-height: 1000px;
+    overflow-y: auto;
+  }
+  

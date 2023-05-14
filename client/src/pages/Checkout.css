@@ -1,0 +1,7 @@
+.checkout-contain {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+}

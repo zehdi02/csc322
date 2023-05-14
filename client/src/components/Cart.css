@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .min-add-rem {
@@ -11,7 +12,7 @@
 
 .cart-wrapper {
     width: 400px;
-    padding: 20px 20px 200px 0;
+    padding: 20px 0 200px 0;
 
 }
 
@@ -21,6 +22,18 @@ table img {
 }
 
 td, h1, h2, h5{
+    color: black;
+}
+.total-clear #total-price {
+    width: 34%;
+}
+
+.total-clear button {
+    height: 32px;
+}
+
+.total-clear a {
+    text-decoration: none;
     color: black;
 }
 
@@ -42,4 +55,15 @@ table {
 
 h1 {
     /* text-align: center; */
+}
+
+.prod-title {
+    width: 100px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
 }

@@ -1,6 +1,22 @@
 .empty-cart {
     padding-top: 100px;
     width: 32%;
-    max-width: 538px;
+    /* max-width: 538px; */
+    text-align: center;
+}
+
+.total-items {
+    /* width: 20%; */
+}
+.total-price {
+    width: 36%;
+    
+}
+
+.clear-cart {
+    /* width: 32%; */
+}
+
+.price-quantity {
     text-align: center;
 }

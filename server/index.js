@@ -59,7 +59,14 @@ app.post("/sign-in",(req,res)=>{
         res.send({message: "User not found!!!"});
       }
     });
-})
+});
+app.post("/user-page",(req,res)=>{
+  const wallet=req.body.wallet
+  const id=req.body.id
+  db.query("UPDATE regUser SET Wallet = ? WHERE userid = ?;",
+  [wallet,id],(err,result) => {console.log(err);
+  });
+});
 
 app.listen(3001, () => {
     console.log("running server");

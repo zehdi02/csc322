@@ -66,7 +66,7 @@ function Header() {
                   {/* <li><a href="#">Contact Us</a></li>  */}
                   {/* <li><a href="#">Purchase History</a></li> */}
                    <li><Link to="/user-page">User Account</Link></li> 
-                  <li><Link to="/sign-up">Buy</Link></li>
+                  {/* <li><Link to="/sign-up">Buy</Link></li> */}
               </ul>
           </nav>
       </div>

@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import BuildPC from './pages/BuildPC';
 import UserPage from './pages/UserPage';
 import ProductDemo from './pages/Products/ProductDemo';
+import Checkout from './pages/Checkout';
 
 import {
   createBrowserRouter,
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
     {
       path: "user-page",
       element: <UserPage />,
+    },
+    {
+      path: "checkout",
+      element: <Checkout />,
     },
   ]);
 

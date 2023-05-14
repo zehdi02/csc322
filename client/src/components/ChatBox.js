@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './ChatBox.css'
 
@@ -13,7 +14,12 @@ function ChatBox() {
     setChatWindowDisplay(!chatWindowDisplay);
   };
 
-  const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt", "faggot", "bastard", "nigga", "fuc"]; 
+  const navigate = useNavigate();
+
+  // count for warning system
+  const [count, setCount] = useState(1);
+
+  const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt", "faggot", "bastard", "nigga", "fuc", "stfu", "gtfo"]; 
 
     //filter for users i.e.. replaces bad words with stars and sends
   function filterBadWords(text) {
@@ -49,12 +55,42 @@ function ChatBox() {
       setMessages([...messages, { sender: 'You', message: filterBadWords(userInput) }]);
       setUserInput('');
     }
+    
     // else if(user is not logged in == user is not registered) {delete bad word message}
     else
     {
+      // if visitor filter goes thru, it means visitor used bad word, so display "cannot send"
+      if (Visitorfilter(userInput) === "")
+      {
+        setMessages([...messages, { sender: <em>System</em>, message: <em>You cannot send that message</em>}])
+      }
+      // if no bad word, send
+      else 
+      {
       setMessages([...messages, { sender: 'You', message: Visitorfilter(userInput) }]);
       setUserInput('');
-    }}
+    }}}
+
+    // if user filter detects bad word, output has stars, count++ for warning
+    if (filterBadWords(userInput).includes("*****"))
+    {
+      setCount((prevCount) => prevCount + 1);
+      console.log(count);
+
+      //send warning msg
+      if (count <= 3)
+      {
+        setMessages([...messages, { sender: 'You', message: filterBadWords(userInput)}, { sender: <em>System</em>, message: <em>Warning Issued</em>}]);
+        setUserInput('');
+      }
+
+      //get kicked if warning >3
+      if (count > 3)
+      {
+       navigate('/kicked'); 
+      }
+    }
+
   };
 
   const handleKeyDown = (event) => {
@@ -63,7 +99,6 @@ function ChatBox() {
       handleSendMessage();
     }
   };
-
 
   return (
     <div id="chat-bot">

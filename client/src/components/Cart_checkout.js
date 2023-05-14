@@ -18,14 +18,9 @@ const Cart_checkout = () => {
         confirmPurchase,
     } = useCart();
 
-    let totalbalance=localStorage.getItem("wallet");
-    //Format numeber
-    
-
     const [balance, setBalance] = useState(parseFloat(localStorage.getItem('wallet')) || 0);
 
     const roundedTotalPrice = cartTotal.toFixed(2); // Round the total price to 2 decimal places
-
     useEffect(() => {
         const storedBalance = parseFloat(localStorage.getItem('wallet')) || 0;
         setBalance(storedBalance);
@@ -42,11 +37,8 @@ const Cart_checkout = () => {
             // Handle insufficient balance error
         }
     }
-    // add commas every 3rd digit for the user balance
-    const formatBalanceWithCommas = (balance) => {
-        return balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    };
 
+    //Format numeber
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',

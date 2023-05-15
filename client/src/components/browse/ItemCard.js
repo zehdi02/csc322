@@ -1,20 +1,31 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useCart } from "react-use-cart"
-
+import { useNavigate } from 'react-router-dom';
+import ProductDemo from "../../pages/Products/ProductDemo.js";
 import './ItemCard.css'
 
+ export let id=1;
+
 const ItemCard = (props) => {
+    const navigate = useNavigate();
     const { addItem } = useCart()
-    
+    console.log("Id",id);
+    //Gets iteam clicked and passes it to productDemos using props
+
+    const handleClick = event => {
+        id=event.currentTarget.id; //Set ID based on target clicked
+         navigate("/product-demo")
+      };
+
     return (
         <div className="prod-item" id="prod1">
             <div className="left-col">
-                <a href="product-demo">
-                    <img src={props.img} alt="Product 1" />
+                <a href="#">
+                    <img src={props.img} alt="Product 1" onClick={handleClick} id={props.id}/>
                 </a>
             </div>
             <div className="middle-col">
-                <a href="product-demo">
+                <a href="#" onClick={handleClick} id={props.id} >
                     <p>{props.title}</p>
                 </a>
                 <div className="rating-stock">
@@ -42,4 +53,4 @@ const ItemCard = (props) => {
     )
 }
 
-export default ItemCard
+export default ItemCard;

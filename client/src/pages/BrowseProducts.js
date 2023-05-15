@@ -121,12 +121,16 @@ function BrowseProducts() {
                             return (
                                 <ItemCard 
                                     item={item} 
+                                    id={item.id}
                                     key={index}
                                     img={item.img} 
                                     title={item.title} 
                                     price={item.price} 
                                     quantity={item.quantity} 
-                                    rating={item.rating} 
+                                    rating={item.rating}
+                                    desc={item.desc}
+                                    
+                                    
                                 />
                             )
                         })}

@@ -37,7 +37,7 @@ const testData = {
             rating: '★★★★★',
         },
         {
-            id: 10,
+            id: 2,
             img: cpu2,
             title: 'Intel - Core i7-13700K 13th Gen 16 cores 8 P-cores + 8 E-cores 30M Cache, 3.4 to 5.4 GHz LGA1700 Unlocked Desktop Processor',
             desc: 'actually a chad laptop',
@@ -50,7 +50,7 @@ const testData = {
         },
 
         {
-            id: 2,
+            id: 3,
             img: motherboard1,
             title: 'MSI - B550 GAMING PLUS (Socket AM4) USB-C Gen 2 AMD ATX GAMING Motherboard PCIE Gen 4 - Black',
             desc: 'actually a poopoo laptop',
@@ -62,7 +62,7 @@ const testData = {
             rating: '★★★☆☆',
         },
         {
-            id: 11,
+            id: 4,
             img: motherboard2,
             title: 'MSI - B550 TOMAHAWK MAX WIFI (Socket AM4) USB-C Gen2 AMD ATX GAMING Motherboard - Black',
             desc: 'actually a poopoo laptop',
@@ -75,7 +75,7 @@ const testData = {
         },
 
         {
-            id: 3,
+            id: 5,
             img: ram1,
             title: 'CORSAIR - VENGEANCE LPX 32GB (2PK x 16GB) 3600MHz DDR4 C18 DIMM Desktop Memory - Black',
             desc: 'k',
@@ -87,7 +87,7 @@ const testData = {
             rating: '★★★★☆',
         },
         {
-            id: 12,
+            id: 6,
             img: ram2,
             title: 'CORSAIR - VENGEANCE PRO 32GB (2PK x 16GB) 3600MHz DDR4 C18 DIMM Desktop Memory with RGB lighting',
             desc: 'k',
@@ -100,7 +100,7 @@ const testData = {
         },
 
         {
-            id: 4,
+            id: 7,
             img: ssd1,
             title: 'Samsung - 870 EVO 2TB Internal SSD SATA',
             desc: 'its a mmk laptop',
@@ -125,7 +125,7 @@ const testData = {
         },
 
         {
-            id: 5,
+            id: 9,
             img: case1,
             title: 'CORSAIR - 4000D AIRFLOW MidTower Case',
             desc: '',
@@ -137,7 +137,7 @@ const testData = {
             rating: '★★★★★',
         },
         {
-            id: 14,
+            id: 10,
             img: case2,
             title: 'NZXT - H7 Flow ATX Mid-Tower Case - Black',
             desc: 'its a mmk laptop',
@@ -150,7 +150,7 @@ const testData = {
         },
 
         {
-            id: 6,
+            id: 11,
             img: cooler1,
             title: 'NZXT - Kraken X63 280mm RGB All-in-one Liquid CPU Cooler - Black',
             desc: 'its a mmk laptop',
@@ -162,7 +162,7 @@ const testData = {
             rating: '★★★★★',
         },
         {
-            id: 15,
+            id: 12,
             img: cooler2,
             title: 'NZXT - Kraken X63 280mm RGB All-in-one Liquid CPU Cooler - Black',
             desc: 'its a mmk laptop',
@@ -175,7 +175,7 @@ const testData = {
         },
 
         {
-            id: 7,
+            id: 13,
             img: gpu1,
             title: 'NVIDIA GeForce RTX 3060 Ventus 3X 12G OC - 12GB GDDR6 - PCI Express 4.0 - Graphics Card - Black',
             desc: 'its a mmk laptop',
@@ -187,7 +187,7 @@ const testData = {
             rating: '★★★★★',
         },
         {
-            id: 16,
+            id: 14,
             img: gpu2,
             title: 'GIGABYTE - NVIDIA GeForce RTX 3060 12GB GDDR6 PCI Express 4.0 Graphics Card',
             desc: 'its a mmk laptop',
@@ -200,7 +200,7 @@ const testData = {
         },
 
         {
-            id: 9,
+            id: 15,
             img: psu1,
             title: 'CORSAIR - RMe Series RM750e 80 PLUS Gold Fully Modular Low-Noise ATX 3.0 and PCIE 5.0 Power Supply - Black',
             desc: 'its a mmk laptop',
@@ -212,7 +212,7 @@ const testData = {
             rating: '★★★★★',
         },
         {
-            id: 18,
+            id: 16,
             img: psu2,
             title: 'CORSAIR - RMx Series RM1000x 80 PLUS Gold Fully Modular ATX Power Supply - Black',
             desc: 'its a mmk laptop',

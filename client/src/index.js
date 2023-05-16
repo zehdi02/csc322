@@ -9,6 +9,7 @@ import BuildPC from './pages/BuildPC';
 import UserPage from './pages/UserPage';
 import ProductDemo from './pages/Products/ProductDemo';
 import Checkout from './pages/Checkout';
+import Forgot from './pages/Forgot';
 
 import Dashboard from './pages/Dashboard';
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
     {
       path: "dashboard",
       element: <Dashboard />,
+    },
+    {
+      path: "forgot",
+      element: <Forgot />,
     },
   ]);
 

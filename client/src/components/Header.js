@@ -85,7 +85,7 @@ function Header() {
                     <img src={require('../img/o-comps_logo2.png')} alt="O-CompS Logo" />
                 </a>
             </Link>
-            <input type="text" placeholder="Search" className="search-bar" />
+            {/* <input type="text" placeholder="Search" className="search-bar" /> */}
             <div className="cart" ref={cartContainerRef}>
               <button className="cart-button" onClick={handleClick}>🛒</button>
               <div className={`cart-container ${isOpen ? 'open' : ''}`}>

@@ -43,10 +43,6 @@ const Cart_checkout = () => {
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 2,
-        /* 
-        the default value for minimumFractionDigits depends on the currency
-        and is usually already 2
-        */
       });
     let formatBalance=useState(formatter.format(balance));
 

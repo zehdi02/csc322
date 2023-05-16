@@ -29,6 +29,20 @@ const CommentSection = () => {
     const name = e.target.value.slice(0, 30);
     setCommenterName(name);
   };
+  
+  // count for warning system
+  const [count, setCount] = useState(1);
+  const taboolist = ["fuck", "bitch", "shit", "motherfucker", "fucker", "asshole", "cunt", "faggot", "bastard", "nigga", "fuc", "stfu", "gtfo"]; 
+  
+  //filter for users i.e.. replaces bad words with stars and sends
+  function filterBadWords(text) {
+    const regex = new RegExp(taboolist.join("|"), "gi");
+    const cleanText = text.replace(regex, "*****"); 
+    return cleanText;
+  }
+  
+  // get login status
+  const loginstat = localStorage.getItem("LoginStatus");
 
   const handleCommentChange = (e) => {
     const comment = e.target.value;
@@ -43,12 +57,36 @@ const CommentSection = () => {
     e.preventDefault();
     let errorMessage = '';
 
-    if (commenterName.length < 3) {
+    if (newComment !== ''){
+      setComments([...comments, { name: commenterName, comment: newComment }]);
+      setNewComment('');
+
+    if (loginstat) {
+      setComments([...comments, { name: commenterName, comment: filterBadWords(newComment) }]);
+      setNewComment('');
+    }
+    else { 
+      errorMessage = 'You must log in to leave comments';
+      const emptycomment = [...comments, { name: '', comment: '' }];
+      setComments(emptycomment);
+      setNewComment('');
+    }
+
+    if (newComment.length > 500) {
+      errorMessage = 'Comment cannot be more than 500 characters.';
+    }
+    if (newComment.trim() === '') {
+      errorMessage = 'Comment cannot be blank.';
+    }}
+
+/*    if (commenterName.length < 3) {
       errorMessage = 'Name must be at least 3 characters long.';
     } else if (newComment.trim() === '') {
       errorMessage = 'Comment cannot be blank.';
     } else if (newComment.length > 500) {
       errorMessage = 'Comment cannot be more than 500 characters.';
+    } else if (loginstat) {
+      errorMessage = 'You must log in to leave comments';
     } else {
       const updatedComments = [...comments, { name: commenterName, comment: newComment }];
       setComments(updatedComments);
@@ -56,7 +94,7 @@ const CommentSection = () => {
 
       // Save comments to localStorage
       saveCommentsToLocalStorage(updatedComments);
-    }
+    }*/
 
     setErrorMessage(errorMessage);
   };
@@ -83,7 +121,7 @@ const CommentSection = () => {
             type="text"
             value={newComment}
             onChange={handleCommentChange}
-            placeholder="500 charachters max"
+            placeholder="500 characters max"
 
           />
         </label>

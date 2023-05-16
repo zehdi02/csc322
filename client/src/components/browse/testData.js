@@ -252,7 +252,7 @@ const testData = {
             price: '148.00',
             rating: '★★★★★',
         },
-        {
+     /*   {
             id: 19,
             img: motherboard_student,
             title: 'ASUS TUF Gaming B550-PLUS',
@@ -347,7 +347,7 @@ const testData = {
             brand: 'EVGA',
             price: '155.00',
             rating: '★★★★★',
-        },
+        },*/
         
     ]
 }

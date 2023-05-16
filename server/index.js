@@ -39,6 +39,17 @@ app.post("/sign-up", (req, res) => {
     });
 });
 
+//Updates Password according to email
+app.post("/forgot", (req, res) => {
+  const password = req.body.password
+  const email = req.body.email
+
+  db.query("UPDATE regUser SET Password = ? WHERE Email = ?", 
+  [password, email], 
+  (err,result) => {console.log(err);
+  });
+});
+
 //Gets infromation from DB
 app.post("/sign-in",(req,res)=>{
     //const firstname = req.body.firstname
@@ -60,6 +71,8 @@ app.post("/sign-in",(req,res)=>{
       }
     });
 });
+
+//Updates Wallet
 app.post("/user-page",(req,res)=>{
   const wallet=req.body.wallet
   const id=req.body.id

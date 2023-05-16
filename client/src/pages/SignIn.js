@@ -33,16 +33,29 @@ function SignIn() {
         }else{
          console.log(response.data[0]);
          const data=response.data[0];    //Login succfull
-         window.loginStatus=true;        
+                 
+         console.log("User status",data.employee);
+         if(data.employee == false){
+          window.loginStatus=true; 
          localStorage.setItem("FullName",data.FirstName+ " "+data.LastName);   
          localStorage.setItem("Phone#",data.Phone);
          localStorage.setItem("email",data.Email);
          localStorage.setItem("LoginStatus",true);  
          localStorage.setItem("wallet",data.Wallet);  
          localStorage.setItem("id",data.userid); 
+         localStorage.setItem("employee",data.employee);
          console.log(window.loginStatus);
          navigate('/user-page');     
+         }
+         else{ //if employee
+          console.log("Employee",data.employee);
+          window.EloginStatus=true;  //emplyoee login status
+          localStorage.setItem("id",data.userid); 
+          localStorage.setItem("employee",data.employee);
+          localStorage.setItem("EloginStatus",true);  //Set emplyoee login status
+          navigate('/dashboard');   
         }
+      }
       });
       
     };

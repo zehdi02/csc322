@@ -10,6 +10,8 @@ import UserPage from './pages/UserPage';
 import ProductDemo from './pages/Products/ProductDemo';
 import Checkout from './pages/Checkout';
 
+import Dashboard from './pages/Dashboard';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
     {
       path: "checkout",
       element: <Checkout />,
+    },
+    {
+      path: "dashboard",
+      element: <Dashboard />,
     },
   ]);
 

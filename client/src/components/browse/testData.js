@@ -45,7 +45,15 @@ import case_gamer from '../../img/presets/gamer/gamer_case.jpg'
 import motherboard_gamer from '../../img/presets/gamer/gamer_motherboard.jpg'
 
 // Business Preset
-
+// cpu_business is cpu2
+import cooler_business from '../../img/presets/business/business_cooler.jpg'
+import ram_business from '../../img/presets/business/business_ram.jpg'
+import ssd_business from '../../img/presets/business/business_ssd.jpg'
+import hdd_business from '../../img/presets/business/business_hdd.jpg'
+import gpu_business from '../../img/presets/business/business_gpu.jpg'
+import psu_business from '../../img/presets/business/business_psu.jpg'
+import case_business from '../../img/presets/business/business_case.jpg'
+import motherboard_business from '../../img/presets/business/business_motherboard.jpg'
 
 
 const testData = {
@@ -463,6 +471,102 @@ const testData = {
 
             cat: 'PSU',
             brand: 'Seasonic',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+         {
+            id: 35,
+            img: motherboard_business,
+            title: 'ASUS Prime Z590-A',
+            desc: "Reliable ASUS Motherboards",
+            quantity: '70',
+
+            cat: 'Motherboard',
+            brand: 'ASUS',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 36,
+            img: ram_business,
+            title: 'Corsair Vengeance LPX 32GB (2 x 16GB) DDR4',
+            desc: "Corsair RAM is Great",
+            quantity: '70',
+
+            cat: 'RAM',
+            brand: 'Corsair',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 37,
+            img: ssd_business,
+            title: 'Samsung 980 Pro 1TB NVMe',
+            desc: "Samsung is Always Good",
+            quantity: '70',
+
+            cat: 'SSD',
+            brand: 'Samsung',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 38,
+            img: hdd_business,
+            title: 'Seagate IronWolf Pro 4TB 7200 RPM',
+            desc: "Seagate is Best",
+            quantity: '70',
+
+            cat: 'HDD',
+            brand: 'Barracuda',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 39,
+            img: case_business,
+            title: 'Fractal Design Meshify C',
+            desc: "Standard Case",
+            quantity: '70',
+
+            cat: 'Case',
+            brand: 'Fractal',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 40,
+            img: cooler_business,
+            title: 'Noctua NH-D15',
+            desc: "Popular Desktop Coolers",
+            quantity: '70',
+
+            cat: 'Cooler',
+            brand: 'Noctua',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 41,
+            img: gpu_business,
+            title: 'NVIDIA GeForce RTX 3060 Ti',
+            desc: "Nothing Beats NVIDIA",
+            quantity: '70',
+
+            cat: 'GPU',
+            brand: 'NVIDIA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 42,
+            img: psu_business,
+            title: 'Corsair RM750x, 80+ Gold 750W',
+            desc: "750W for the Power",
+            quantity: '70',
+
+            cat: 'PSU',
+            brand: 'Corsair',
             price: '155.00',
             rating: '★★★★★',
         },

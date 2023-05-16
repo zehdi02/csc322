@@ -39,7 +39,7 @@ function SignUp() {
                     <input type="tel" name="phone" placeholder="Mobile Phone Number" required onChange={(e) => {setphoneReg(e.target.value);}}/>
                     <button type="submit" onClick={regist} >Sign Up</button>
                 </form>
-                <p>Already have an account? <a href="/login">Sign in</a></p>
+                <p>Already have an account? <a href="/sign-in">Sign in</a></p>
             </div>
     </MainLayout>
   )

@@ -244,7 +244,7 @@ const testData = {
             id: 18,
             img: cpu_student,
             title: 'AMD Ryzen 5 5600X',
-            desc: "AMD's fastest 6 core processor for mainstream desktop, with 12 processing threads",
+            desc: "AMD's Fastest 6-Core (12 Processing Threads) Processor for Mainstream Use",
             quantity: '70',
 
             cat: 'CPU',
@@ -252,6 +252,103 @@ const testData = {
             price: '148.00',
             rating: '★★★★★',
         },
+        {
+            id: 19,
+            img: motherboard_student,
+            title: 'ASUS TUF Gaming B550-PLUS',
+            desc: "Latest Asus Motherboard for Peak Performance",
+            quantity: '70',
+
+            cat: 'Motherboard',
+            brand: 'ASUS',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 20,
+            img: ram_student,
+            title: 'Corsair Vengeance LPX 16GB (2x 8GB) DDR4',
+            desc: "Trusted Corsair RAM",
+            quantity: '70',
+
+            cat: 'RAM',
+            brand: 'CORSAIR',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 21,
+            img: ssd_student,
+            title: 'Samsung 970 EVO Plus 500GB NVMe',
+            desc: "Popular SSD Choice for Work",
+            quantity: '70',
+
+            cat: 'SSD',
+            brand: 'SAMSUNG',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 22,
+            img: hdd_student,
+            title: 'Seagate Barracuda 2TB 7200 RPM',
+            desc: "Most Used HDD Among NASA",
+            quantity: '70',
+
+            cat: 'HDD',
+            brand: 'BARRACUDA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 23,
+            img: case_student,
+            title: 'NZXT H510',
+            desc: "Clean Tower Case - Perfect for Office and Gaming",
+            quantity: '70',
+
+            cat: 'Case',
+            brand: 'NZXT',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 24,
+            img: cooler_student,
+            title: 'Cooler Master Hyper 212 RGB Black Edition',
+            desc: "Trusted Cooler Master for Budget Option",
+            quantity: '70',
+
+            cat: 'Cooler',
+            brand: 'COOLER MASTER',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 25,
+            img: gpu_student,
+            title: 'NVIDIA GeForce GTX 1660 Super',
+            desc: "Popular Budget GPU Among Gamers",
+            quantity: '70',
+
+            cat: 'GPU',
+            brand: 'NVIDIA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 26,
+            img: psu_student,
+            title: 'EVGA 600 W1, 80+ WHITE 600W',
+            desc: "Standard EVGA Power Supply",
+            quantity: '70',
+
+            cat: 'PSU',
+            brand: 'EVGA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        
     ]
 }
 

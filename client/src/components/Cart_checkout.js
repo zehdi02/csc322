@@ -26,19 +26,35 @@ const Cart_checkout = () => {
         setBalance(storedBalance);
     }, []); // Run this effect only once on component mount
 
-    const handleConfirmPurchase = () => {
-        if (balance >= cartTotal) {
-            emptyCart();
-            const updatedBalance = balance - cartTotal;
-            setBalance(updatedBalance);
-            localStorage.setItem('wallet', updatedBalance.toString()); // Store the updated balance in local storage
-        } else {
-            console.log('Insufficient balance');
-            // Handle insufficient balance error
-        }
-    }
 
-    //Format numeber
+    //for pop up
+    const [showPopup, setShowPopup] = useState(false);
+
+    const openPopup = () => {
+        setShowPopup(true);
+      };
+    
+      const closePopup = () => {
+        setShowPopup(false);
+      };
+
+    //to check if user is logged in
+    const loginstat = localStorage.getItem("LoginStatus");
+
+    const handleConfirmPurchase = () => {
+        if (!loginstat) {openPopup();}
+        else {
+            if (balance >= cartTotal) {
+                emptyCart();
+                const updatedBalance = balance - cartTotal;
+                setBalance(updatedBalance);
+                localStorage.setItem('wallet', updatedBalance.toString()); // Store the updated balance in local storage
+            } else {
+                console.log('Insufficient balance');
+                // Handle insufficient balance error
+            }}}
+
+    //Format number
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -60,6 +76,15 @@ const Cart_checkout = () => {
                         onClick={handleConfirmPurchase }>
                             Confirm Purchase
                         </button>
+                        {showPopup && (
+                            <div className = "popup">
+                                <div className = "popup-content">
+                                    <span className = "close" onClick={closePopup}>&times;</span>
+                                    <h2> Error </h2>
+                                    <p> Please Sign in and Deposit Money to continue to Checkout </p>
+                                    </div>
+                                    </div>
+                        )}
                     </a>
                 </div>
             </div>

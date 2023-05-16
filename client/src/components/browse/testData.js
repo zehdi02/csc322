@@ -33,6 +33,20 @@ import psu_student from '../../img/presets/student/student_psu.jpg'
 import case_student from '../../img/presets/student/student_case.jpg'
 import motherboard_student from '../../img/presets/student/student_motherboard.jpg'
 
+// Gamer Preset
+// cpu_gamer is cpu1
+import cooler_gamer from '../../img/presets/gamer/gamer_cooler.jpg'
+import ram_gamer from '../../img/presets/gamer/gamer_ram.jpg'
+import ssd_gamer from '../../img/presets/gamer/gamer_ssd.jpg'
+import hdd_gamer from '../../img/presets/gamer/gamer_hdd.jpg'
+import gpu_gamer from '../../img/presets/gamer/gamer_gpu.jpg'
+import psu_gamer from '../../img/presets/gamer/gamer_psu.jpg'
+import case_gamer from '../../img/presets/gamer/gamer_case.jpg'
+import motherboard_gamer from '../../img/presets/gamer/gamer_motherboard.jpg'
+
+// Business Preset
+
+
 
 const testData = {
     productData: [
@@ -353,6 +367,102 @@ const testData = {
 
             cat: 'PSU',
             brand: 'EVGA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 27,
+            img: motherboard_gamer,
+            title: 'MSI MAG X570 TOMAHAWK',
+            desc: "Trusted MSI Motherboard",
+            quantity: '70',
+
+            cat: 'Motherboard',
+            brand: 'MSI',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 28,
+            img: ram_gamer,
+            title: 'G.Skill Trident Z RGB 32GB (2 x 16GB) DDR4',
+            desc: "RGB for the Gamers",
+            quantity: '70',
+
+            cat: 'RAM',
+            brand: 'G.Skill',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 29,
+            img: ssd_gamer,
+            title: 'Western Digital SN850 1TB NVMe',
+            desc: "SSD Made to Withstand Wear and Tear",
+            quantity: '70',
+
+            cat: 'SSD',
+            brand: 'WD',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 30,
+            img: hdd_gamer,
+            title: 'Seagate Barracuda 4TB 7200 RPM',
+            desc: "Standard 4TB Powerful Enough for NASA",
+            quantity: '70',
+
+            cat: 'HDD',
+            brand: 'Barracuda',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 31,
+            img: case_gamer,
+            title: 'Cooler Master MasterCase H500P Mesh',
+            desc: "Budget Case for Gamers",
+            quantity: '70',
+
+            cat: 'Case',
+            brand: 'Cooler Master',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 32,
+            img: cooler_gamer,
+            title: 'NZXT Kraken X63',
+            desc: "Nothing is More Reliable than NZXT",
+            quantity: '70',
+
+            cat: 'Cooler',
+            brand: 'NZXT',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 33,
+            img: gpu_gamer,
+            title: 'NVIDIA GeForce RTX 3070',
+            desc: "No One Beats NVIDIA",
+            quantity: '70',
+
+            cat: 'GPU',
+            brand: 'NVIDIA',
+            price: '155.00',
+            rating: '★★★★★',
+        },
+        {
+            id: 34,
+            img: psu_gamer,
+            title: 'Seasonic Focus GX-750, 80+ Gold 750W',
+            desc: "Fancy Golden PSU",
+            quantity: '70',
+
+            cat: 'PSU',
+            brand: 'Seasonic',
             price: '155.00',
             rating: '★★★★★',
         },

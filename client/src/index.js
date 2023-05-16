@@ -10,6 +10,7 @@ import UserPage from './pages/UserPage';
 import ProductDemo from './pages/Products/ProductDemo';
 import Checkout from './pages/Checkout';
 import Forgot from './pages/Forgot';
+import Kicked from './pages/Kicked';
 
 import Dashboard from './pages/Dashboard';
 import Presets from './pages/Presets';
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
     {
       path: "presets",
       element: <Presets />,
+    },
+    {
+      path: "kicked",
+      element: <Kicked />,
     },
   ]);
 

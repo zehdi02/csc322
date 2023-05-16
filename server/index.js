@@ -33,9 +33,20 @@ app.post("/sign-up", (req, res) => {
     const phone = req.body.phone
 
 
-    db.query("INSERT INTO regUser (FirstName, LastName, Email, Password, Phone) VALUES (?,?,?,?,?)", 
+    db.query("INSERT INTO UNPAccounts (FirstName, LastName, Email, Password, Phone) VALUES (?,?,?,?,?)", 
     [firstname, lastname, email, password, phone], 
     (err,result) => {console.log(err);
+      if(err == null){
+        if(err){
+          console.log(err);
+          res.send({err:err})
+        }
+        if(err == null){
+        console.log(result);
+        res.send({message: "Sign up successful you account is being processed !!!"});
+      } else
+        res.send({message: "A problem has occured please try "});
+    }
     });
 });
 
@@ -47,7 +58,7 @@ app.post("/forgot", (req, res) => {
   db.query("UPDATE regUser SET Password = ? WHERE Email = ?", 
   [password, email], 
   (err,result) => {console.log(err);
-  });
+});
 });
 
 //Gets infromation from DB
@@ -71,7 +82,47 @@ app.post("/sign-in",(req,res)=>{
       }
     });
 });
+//returns entire UN[Accounts table
+app.post("/dashboard",(req,res)=>{
+  db.query("SELECT * FROM UNPAccounts", 
+  (err,result) =>{
+    if(err){
+      console.log(err);
+      res.send({err:err})
+    }
+    if(result.length> 0){
+      console.log(result);
+      res.send(result);
+    } else{
+      console.log("Data not found");
+      res.send({message: "Data not found!!!"});
+    }
 
+  });
+})
+//Deletes specific user from entire UN[Accounts table
+app.post("/dashboard-delete",(req,res)=>{
+  const email = req.body.email
+  const id = Number(req.body.id)
+  db.query("DELETE FROM UNPAccounts WHERE Email= ? AND userid= ?", 
+  [email,id],
+  (err,result) => { console.log(err)
+  });
+})
+//Accept users
+app.post("/dashboard-accept",(req,res)=>{
+  const firstname = req.body.firstname
+    const lastname = req.body.lastname
+    const email = req.body.email
+    const password = req.body.password
+    const phone = req.body.phone
+
+
+    db.query("INSERT INTO regUser (FirstName, LastName, Email, Password, Phone) VALUES (?,?,?,?,?)", 
+    [firstname, lastname, email, password, phone], 
+    (err,result) => {console.log(err);
+    });
+})
 //Updates Wallet
 app.post("/user-page",(req,res)=>{
   const wallet=req.body.wallet

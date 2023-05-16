@@ -24,6 +24,14 @@ import psu2 from '../../img/products_page/psu2.png'
 
 // Presets
 import cpu_student from '../../img/presets/student/student_cpu.jpg'
+import cooler_student from '../../img/presets/student/student_cooler.jpg'
+import ram_student from '../../img/presets/student/student_ram.jpg'
+import ssd_student from '../../img/presets/student/student_ssd.jpg'
+import hdd_student from '../../img/presets/student/student_hdd.jpg'
+import gpu_student from '../../img/presets/student/student_gpu.jpg'
+import psu_student from '../../img/presets/student/student_psu.jpg'
+import case_student from '../../img/presets/student/student_case.jpg'
+import motherboard_student from '../../img/presets/student/student_motherboard.jpg'
 
 
 const testData = {
@@ -252,7 +260,7 @@ const testData = {
             price: '148.00',
             rating: '★★★★★',
         },
-     /*   {
+        {
             id: 19,
             img: motherboard_student,
             title: 'ASUS TUF Gaming B550-PLUS',
@@ -347,7 +355,7 @@ const testData = {
             brand: 'EVGA',
             price: '155.00',
             rating: '★★★★★',
-        },*/
+        },
         
     ]
 }

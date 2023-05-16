@@ -12,7 +12,7 @@ function SignUp() {
   const [emailReg, setemailReg] = useState("");
   const [passwordReg, setpasswordReg] = useState("");
   const [phoneReg, setphoneReg] = useState("");
-
+  const [signupMessage,getsignupMessage]=useState("");
   const regist = () => {
     Axios.post("http://localhost:3001/sign-up", {
       firstname: fnameReg,
@@ -21,7 +21,13 @@ function SignUp() {
       password: passwordReg,
       phone: phoneReg,
     }).then((response) => {
-      console.log(response);
+      if(response.data.message){
+      console.log(response.data.message);
+      getsignupMessage(response.data.message);
+      }else{
+        getsignupMessage("Something went wrong please try again !!!");
+      }
+
     });
   };
 
@@ -40,6 +46,7 @@ function SignUp() {
                     <button type="submit" onClick={regist} >Sign Up</button>
                 </form>
                 <p>Already have an account? <a href="/sign-in">Sign in</a></p>
+                <p>{signupMessage}</p> 
             </div>
     </MainLayout>
   )

@@ -20,3 +20,28 @@ h1 {
     padding: 8px;
     text-decoration: none;
 }
+
+.preset-cont {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.preset-cont .cta {
+    width: 90px;
+}
+
+.student-preset, .business-preset, .gamer-preset {
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+
+.preset-cont img {
+    width: auto;
+    height: 300px;
+    padding-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+}

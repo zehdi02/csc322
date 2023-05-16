@@ -11,6 +11,7 @@ import ProductDemo from './pages/Products/ProductDemo';
 import Checkout from './pages/Checkout';
 
 import Dashboard from './pages/Dashboard';
+import Presets from './pages/Presets';
 
 import {
   createBrowserRouter,
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
     {
       path: "dashboard",
       element: <Dashboard />,
+    },
+    {
+      path: "presets",
+      element: <Presets />,
     },
   ]);
 

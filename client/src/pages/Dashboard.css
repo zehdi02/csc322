@@ -1,3 +1,7 @@
 .dash-contain {
     display: flex;
 }
+
+.user-info {
+    display: flex;
+}

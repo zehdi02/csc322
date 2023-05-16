@@ -37,7 +37,19 @@ function Dashboard() {
                         </tr>
                     </thead>
                     <tbody id="userTableBody">
-                        {/* populate with users */}
+                        <tr className='user-info'>
+                            <td>
+                                test
+                            </td>
+                            <td>
+                                test
+                            </td>
+                            <td>
+                                <button className='accept'>Accept</button>
+                                <button className='reject'>Reject</button>
+                            </td>
+                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

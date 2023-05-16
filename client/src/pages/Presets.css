@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.build-cont {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.presets-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    padding: 0 100px;
+    text-align: center;
+}
+
+.preset-table {
+}
+
+th {
+    width: 20%;
+}
+
+td {
+    text-align: center;
+}
+
+.add-preset-cart {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+#student-pc, #gamer-pc, #business-pc {
+    /* padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px; */
+    width: 100%;
+}
+
+.student-build, .gamer-build, .business-build {
+    /* display: flex; */
+    width: 200px;
+    padding-left: 00px;
+}

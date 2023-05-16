@@ -22,6 +22,10 @@ import gpu2 from '../../img/products_page/gpu2.png'
 import psu1 from '../../img/products_page/psu1.png'
 import psu2 from '../../img/products_page/psu2.png'
 
+// Presets
+import cpu_student from '../../img/presets/student/student_cpu.jpg'
+
+
 const testData = {
     productData: [
         {
@@ -221,6 +225,31 @@ const testData = {
             cat: 'PSU',
             brand: 'CORSAIR',
             price: '189.99',
+            rating: '★★★★★',
+        },
+        {
+            id: 17,
+            img: psu2,
+            title: 'CORSAIR - RMx Series RM1000x 80 PLUS Gold Fully Modular ATX Power Supply - Black',
+            desc: 'Classic Power Supply from trusted Corsair',
+            quantity: '70',
+
+            cat: 'PSU',
+            brand: 'CORSAIR',
+            price: '189.99',
+            rating: '★★★★★',
+        },
+        // presets
+        {
+            id: 18,
+            img: cpu_student,
+            title: 'AMD Ryzen 5 5600X',
+            desc: "AMD's fastest 6 core processor for mainstream desktop, with 12 processing threads",
+            quantity: '70',
+
+            cat: 'CPU',
+            brand: 'AMD',
+            price: '148.00',
             rating: '★★★★★',
         },
     ]

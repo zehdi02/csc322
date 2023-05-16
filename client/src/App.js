@@ -10,6 +10,10 @@ import ItemCards_new from './components/landing_page/ItemCards_new';
 import ItemCards_deal from './components/landing_page/ItemCards_deal';
 import ItemCards_user from './components/landing_page/ItemCards_user';
 
+import studentImg from './img/presets/student_pc.png'
+import businessImg from './img/presets/business_pc.png'
+import gamerImg from './img/presets/gamer_pc.png'
+
 function App() {
 
     console.warn(testData.productData)
@@ -102,23 +106,36 @@ function App() {
 
     <div class="border"></div>
 
-    {/* <section id="personal_products">
-        <h2>Based on your recent history</h2>
-        <div className="personal-deals">
-            {testData.productData.map((item, index)=> {
-                return (
-                    <ItemCards_user
-                        item={item} 
-                        key={index}
-                        img={item.img} 
-                        title={item.title} 
-                    />
-                )
-            })}
+    <section id="personal_products">
+        <h2>Student? Gamer? Business?<br></br>We got it for you!</h2>
+        <div className="">
+            <div className='preset-cont'>
+                <div className='student-preset'>
+                        <h3>Student</h3>
+                    <Link to='presets'>
+                        <img src={studentImg} alt='student pc'/>
+                        <a href="#" className="cta">Learn More</a>
+                    </Link>
+                </div>
+                <div className='gamer-preset'>
+                        <h3>Gamer</h3>
+                    <Link to='presets'>
+                        <img src={gamerImg} alt='student pc'/>
+                        <a href="#" className="cta">Learn More</a>
+                    </Link>
+                </div>
+                <div className='business-preset'>
+                        <h3>Business</h3>
+                    <Link to='presets'>
+                        <img src={businessImg} alt='student pc'/>
+                        <a href="#" className="cta">Learn More</a>
+                    </Link>
+                </div>
+            </div>
         </div>
-    </section> */}
+    </section>
 
-    {/* <div class="border-thin"></div> */}
+    <div class="border-thin"></div>
 
     <section id="new-products">
         <h2>Our Newest Releases</h2>

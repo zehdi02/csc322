@@ -13,13 +13,19 @@ function Header() {
   const cartContainerRef = useRef(null);
   const [loginStatus,getloginStatus]= useState(()=>{
     window.loginStatus = localStorage.getItem('LoginStatus');
+    window.EloginStatus = localStorage.getItem("EloginStatus");
+    console.log(window.EloginStatus);
     console.log(window.loginStatus);
   });
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
+  const logout=()=>{
+    window.loginStatus=false;
+    window.EloginStatus=false;
+    localStorage.clear();    
+}
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (cartContainerRef.current && !cartContainerRef.current.contains(event.target)) {
@@ -65,7 +71,7 @@ function Header() {
                   <li><a href="#">About Us</a></li>
                   {/* <li><a href="#">Contact Us</a></li>  */}
                   {/* <li><a href="#">Purchase History</a></li> */}
-                   <li><Link to="/user-page">User Account</Link></li> 
+                   <li> <Link to="/user-page">User Account</Link></li> 
                   {/* <li><Link to="/sign-up">Buy</Link></li> */}
               </ul>
           </nav>
@@ -73,7 +79,48 @@ function Header() {
       {isOpen && <div className="overlay" />}
       </header>);
 
-    }else
+    }
+    if(window.EloginStatus){
+      return(<header className="nav_bar">
+
+      <div className="header-container">
+          <div className="logo-search-cart">
+              <Link to="/" className="logo">
+                  <a href="#">
+                      <img src={require('../img/o-comps_logo2.png')} alt="O-CompS Logo" />
+                  </a>
+              </Link>
+              {/* <input type="text" placeholder="Search" className="search-bar" /> */}
+              <div className="cart" ref={cartContainerRef}>
+                <button className="cart-button" onClick={handleClick}>🛒</button>
+                <div className={`cart-container ${isOpen ? 'open' : ''}`}>
+                   
+                    <CartProvider>
+                      <Cart />
+  
+                    </ CartProvider>
+                </div>
+              </div>
+          </div>
+  
+          <nav>
+              <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/browse-products">Products</Link></li>
+                  <li><Link to="/build-pc">Build a PC</Link></li>
+                  <li><a href="#">About Us</a></li>
+                  {/* <li><a href="#">Contact Us</a></li>  */}
+                  {/* <li><a href="#">Purchase History</a></li> */}
+                   <li> <Link to="/dashboard">Employee dashboard</Link></li> 
+                   <li><Link to="/" onClick={logout}> Logout </Link>  </li>
+                  {/* <li><Link to="/sign-up">Buy</Link></li> */}
+              </ul>
+          </nav>
+      </div>
+      {isOpen && <div className="overlay" />}
+      </header>);
+
+    }
  //If user is not logged in show this header
   return (
     <header className="nav_bar">
